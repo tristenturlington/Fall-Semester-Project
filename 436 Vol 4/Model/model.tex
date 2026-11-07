@@ -1,0 +1,129 @@
+\documentclass[11pt]{article}
+
+% Compile with pdfLaTeX (for example, in Overleaf or with latexmk).
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+
+\title{Plant-Caterpillar-Bee Population Models}
+\begin{document}
+\maketitle
+
+\section{Stage 1 Caterpillar-Plant Model}
+
+\subsection{Assumptions}
+\begin{enumerate}
+    \item In the absence of caterpillars, plants grow logistically with intrinsic
+    growth rate $r$ and carrying capacity $K$.
+    \item Plant loss due to herbivory (caterpillar feeding) is proportional to the product of plant
+    and caterpillar abundances, with coefficient $a$.
+    \item Plant losses are converted into caterpillar population growth with
+    efficiency $\varepsilon$.
+    \item Caterpillars have a constant natural mortality rate $\mu$.
+\end{enumerate}
+
+\subsection{Variables and Units}
+\begin{center}
+    \begin{tabular}{@{}p{0.15\linewidth}p{0.49\linewidth}p{0.26\linewidth}@{}}
+        \hline
+        Variable & Meaning & Units \\
+        \hline
+        $P$ & Plant abundance & Plants \\
+        $C$ & Caterpillar abundance & Caterpillars \\
+        $t$ & Time & Days \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsection{Parameters and Units}
+\begin{center}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{@{}p{0.15\linewidth}p{0.49\linewidth}p{0.26\linewidth}@{}}
+        \hline
+        Parameter & Biological meaning & Units \\
+        \hline
+        $r$ & Intrinsic plant growth rate & $\mathrm{day}^{-1}$ \\
+        $K$ & Plant carrying capacity & Plants \\
+        $a$ & Rate of plant loss due to caterpillar
+        feeding & $(\mathrm{caterpillar}\cdot\mathrm{day})^{-1}$ \\
+        $\varepsilon$ & Efficiency of converting plant losses into caterpillar
+        population growth & caterpillars/plant \\
+        $\mu$ & Natural caterpillar mortality rate & $\mathrm{day}^{-1}$ \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsection{Model Equations}
+\begin{equation}
+    \begin{aligned}
+        \frac{dP}{dt} &= rP\left(1-\frac{P}{K}\right)-aPC, \\
+        \frac{dC}{dt} &= \varepsilon aPC-\mu C.
+    \end{aligned}
+    \label{eq:model}
+\end{equation}
+
+\clearpage
+\section{Stage 2 Caterpillar Plant Bee Model}
+
+\subsection{Assumptions}
+\begin{enumerate}
+    \item Plant growth, caterpillar feeding, and caterpillar mortality follow
+    the Stage 1 model.
+    \item Flower visitation per bee increases with plant abundance and
+    saturates at $v$, reaching half its maximum when $P=H$.
+    \item Flower visits support plant growth and bee population growth.
+    Additional plant growth from bees is limited by the plant carrying capacity $1-P/K$.
+    \item Bees experience natural mortality and density-dependent competition (as bees increase, competition between them increases as flower's resources deplete).
+\end{enumerate}
+
+\subsection{Variables and Units}
+\begin{center}
+    \begin{tabular}{@{}p{0.15\linewidth}p{0.49\linewidth}p{0.26\linewidth}@{}}
+        \hline
+        Variable & Meaning & Units \\
+        \hline
+        $P$ & Plant abundance & Plants \\
+        $C$ & Caterpillar abundance & Caterpillars \\
+        $B$ & Bee abundance & Bees \\
+        $t$ & Time & Days \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsection{Parameters and Units}
+\begin{center}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{@{}p{0.15\linewidth}p{0.49\linewidth}p{0.26\linewidth}@{}}
+        \hline
+        Parameter & Biological meaning & Units \\
+        \hline
+        $r$ & Intrinsic plant growth rate & $\mathrm{day}^{-1}$ \\
+        $K$ & Plant carrying capacity & plants \\
+        $a$ & Rate of plant loss due to caterpillar feeding & $(\mathrm{caterpillar}\cdot\mathrm{day})^{-1}$ \\
+        $\varepsilon$ & Efficiency of converting plant losses into caterpillar
+        population growth & caterpillars/plant \\
+        $\mu$ & Natural caterpillar mortality rate & $\mathrm{day}^{-1}$ \\
+        $v$ & Maximum flower visits per bee & $\mathrm{visits}/(\mathrm{bee}\cdot\mathrm{day})$ \\
+        $H$ & Plant abundance at which visitation per bee reaches half its
+        maximum & plants \\
+        $\beta$ & Additional plant growth per bee flower visit & plants/visit \\
+        $\gamma$ & Bee population growth contribution per flower visit & bees/visit \\
+        $d$ & Natural bee mortality rate & $\mathrm{day}^{-1}$ \\
+        $q$ & Strength of density-dependent bee competition & $(\mathrm{bee}\cdot\mathrm{day})^{-1}$ \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsection{Model Equations}
+\begin{equation}
+    \begin{aligned}
+        \frac{dP}{dt} &= rP\left(1-\frac{P}{K}\right)-aPC
+        +\beta\frac{vPB}{H+P}\left(1-\frac{P}{K}\right), \\
+        \frac{dC}{dt} &= \varepsilon aPC-\mu C, \\
+        \frac{dB}{dt} &= \gamma\frac{vPB}{H+P}-dB-qB^2.
+    \end{aligned}
+    \label{eq:stage2-model}
+\end{equation}
+
+\end{document}
