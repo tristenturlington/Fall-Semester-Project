@@ -2,4 +2,43 @@
 \pagestyle{empty}
 \begin{document}
 \noindent Ashtyn Whipple
+
+\section{Model 1: Plant and Caterpillar Population Dynamics}
+
+\subsection{Model Development}
+
+I developed Model 1 to investigate the population dynamics between flowering plants and caterpillars. The model describes plant growth using a logistic growth term, which accounts for the environment's carrying capacity, while caterpillars consume plants and reproduce based on the available food supply.
+
+The system of differential equations is:
+
+\[
+\frac{dp}{dt}=\alpha p\left(1-\frac{p}{K}\right)-apc
+\]
+
+\[
+\frac{dc}{dt}=-\mu c+\varepsilon apc
+\]
+
+where \(p\) represents the plant population, \(c\) represents the caterpillar population, and \(K\) is the plant carrying capacity.
+
+\subsection{Equilibrium and Stability Analysis}
+
+I found three equilibria:
+
+- \(E_1=(0,0)\): Both populations become extinct.
+- \(E_2=(K,0)\): Plants survive at carrying capacity, while caterpillars become extinct.
+- \(E_3=\left(\frac{\mu}{\varepsilon a},\frac{\alpha}{a}\left(1-\frac{\mu}{\varepsilon aK}\right)\right)\): Plants and caterpillars coexist.
+
+Using the Jacobian matrix and its eigenvalues, I determined that the extinction equilibrium is a saddle point. The plant-only equilibrium is stable when \(K<\frac{\mu}{\varepsilon a}\), but becomes unstable when \(K>\frac{\mu}{\varepsilon a}\). The coexistence equilibrium is stable whenever it is biologically feasible, which occurs when:
+
+\[
+K>\frac{\mu}{\varepsilon a}
+\]
+
+Using the parameter values \(\alpha=0.8\), \(a=0.1\), \(\mu=0.2\), and \(\varepsilon=0.5\), the critical carrying capacity is \(K=4\). At this value, the plant-only and coexistence equilibria meet, producing a transcritical bifurcation. Above this threshold, a stable coexistence equilibrium becomes possible.
+
+\subsection{Limitations and Motivation for Model 2}
+
+Although Model 1 describes the interactions between plants and caterpillars, it does not account for bees and their role in pollination. Bees contribute to plant reproduction and population growth, meaning their presence could indirectly influence the amount of food available to caterpillars. Therefore, Model 1 cannot fully represent the ecosystem or explain how pollination affects the balance between plants and caterpillars. Adding bees in Model 2 will allow us to investigate these additional interactions and better understand the ecosystem as a whole.
+
 \end{document}
