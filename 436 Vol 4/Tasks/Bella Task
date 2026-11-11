@@ -1,1 +1,36 @@
 Working on model 2
+
+look at how adding bees changes the plantcaterpillar model, and
+whether supporting bees, reducing herbivory, or doing both helps the plants.
+
+1. K bifurcation plots to compare with Ashtyn's model
+
+- Keep the shared parameters the same as Ashtyn's and use the same K range.
+  Pick and explain the extra bee parameters, then keep those fixed while K
+  changes.
+- Make three panels with K on the x-axis: equilibrium plant abundance,
+  caterpillar abundance, and bee abundance.
+- Things I want to check: Does increasing K actually give us more plants,
+  or does it mostly support more caterpillars? Do bees let more caterpillars survive at the same K? Does adding bees change stability as K increases?
+- When caterpillars are present at equilibrium, both models give
+  P* = mu/(eps*a). I want to see whether the plant curves stay the same
+  while the caterpillar curves differ. The bee curve should help explain
+  where those differences come from.
+- Model 2 coexistence could stay stable or lose stability over the K range.
+  Check what actually happens for the parameters I use.
+
+2. Time plots comparing ways to support the plants
+
+- Compare four scenarios: no intervention, bee support, reduced
+  herbivory, and both together.
+- Start all four from the same populations and apply the interventions at
+  the same time. Keep everything else the same.
+- Maybe represent bee support by reducing d the bee
+  mortality rate. A possible way to reduce herbivory is to lower a the
+  feeding coefficient. Choose and explain
+- Changing initial B or C instead would represent a one time intervention. Decide which i want to do before coding it.
+- Plot plant abundance over time for all four scenarios.
+- Compare average plant abundance, the lowest plant abundance etc
+- Check whether any plant benefit lasts or whether extra caterpillars
+  eventually consume the additional plant production.
+

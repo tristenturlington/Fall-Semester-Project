@@ -1,5 +1,536 @@
-\documentclass{article}
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
 \pagestyle{empty}
+
+\title{Stage 2: Caterpillar--Plant--Bee Model}
+\author{Isabella Squire}
+\date{}
+
 \begin{document}
-\noindent Isabella Squire
+\maketitle
+
+\section{Model}
+
+\begin{equation}
+    \begin{aligned}
+        \frac{dP}{dt} &= rP\left(1-\frac{P}{K}\right)-aPC
+        +\beta\frac{vPB}{H+P}\left(1-\frac{P}{K}\right), \\
+        \frac{dC}{dt} &= \varepsilon aPC-\mu C, \\
+        \frac{dB}{dt} &= \gamma\frac{vPB}{H+P}-dB-qB^2.
+    \end{aligned}
+\end{equation}
+
+\subsection{Assumptions}
+\begin{enumerate}
+    \item Plant growth, caterpillar feeding, and caterpillar growth and
+    mortality follow the Stage 1 model.
+    \item Flower visitation per bee increases with plant abundance and
+    saturates at $v$, reaching half its maximum when $P=H$.
+    \item Flower visits support plant growth and bee population growth.
+    Additional plant growth from bees is limited by the factor $1-P/K$.
+    \item Bees experience natural mortality and density-dependent competition.
+\end{enumerate}
+
+\subsection{Variables and Units}
+\begin{center}
+    \begin{tabular}{@{}p{0.15\linewidth}p{0.49\linewidth}p{0.26\linewidth}@{}}
+        \hline
+        Variable & Meaning & Units \\
+        \hline
+        $P$ & Plant abundance & Plants \\
+        $C$ & Caterpillar abundance & Caterpillars \\
+        $B$ & Bee abundance & Bees \\
+        $t$ & Time & Days \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsection{Parameters and Units}
+\begin{center}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{@{}p{0.15\linewidth}p{0.49\linewidth}p{0.26\linewidth}@{}}
+        \hline
+        Parameter & Biological meaning & Units \\
+        \hline
+        $r$ & Intrinsic plant growth rate & $\mathrm{day}^{-1}$ \\
+        $K$ & Plant carrying capacity & plants \\
+        $a$ & Rate of plant loss due to caterpillar feeding & $(\mathrm{caterpillar}\cdot\mathrm{day})^{-1}$ \\
+        $\varepsilon$ & Efficiency of converting plant losses into caterpillar
+        population growth & caterpillars/plant \\
+        $\mu$ & Natural caterpillar mortality rate & $\mathrm{day}^{-1}$ \\
+        $v$ & Maximum flower visits per bee & $\mathrm{visits}/(\mathrm{bee}\cdot\mathrm{day})$ \\
+        $H$ & Plant abundance at which visitation per bee reaches half its
+        maximum & plants \\
+        $\beta$ & Additional plant growth per bee flower visit & plants/visit \\
+        $\gamma$ & Bee population growth contribution per flower visit & bees/visit \\
+        $d$ & Natural bee mortality rate & $\mathrm{day}^{-1}$ \\
+        $q$ & Strength of density-dependent bee competition & $(\mathrm{bee}\cdot\mathrm{day})^{-1}$ \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\section{Equilibrium Solutions}
+
+\begin{center}
+    \small
+    \renewcommand{\arraystretch}{1.2}
+    \setlength{\tabcolsep}{3pt}
+    \begin{tabular}{@{}p{0.16\linewidth}p{0.36\linewidth}p{0.20\linewidth}p{0.24\linewidth}@{}}
+        \hline
+        \textbf{Equilibrium\newline name} & \textbf{Equilibrium $(P^*,C^*,B^*)$}
+        & \textbf{Biologically\newline feasible when} & \textbf{Stability} \\
+        \hline
+        Extinction ($E_0$) & $(0,0,0)$ & Always & Unstable saddle \\
+        Plants only ($E_P$) & $(K,0,0)$ & Always
+        & Stable if \newline
+        $K<\dfrac{\mu}{\varepsilon a}$ \newline
+        and $\dfrac{\gamma vK}{H+K}<d$ \\
+        Plant--bee ($E_{PB}$)
+        & $\left(K,0,\frac{1}{q}\left(\frac{\gamma vK}{H+K}-d\right)\right)$
+        & $\dfrac{\gamma vK}{H+K}>d$
+        & Stable if $K<\dfrac{\mu}{\varepsilon a}$ \\
+        \shortstack[l]{Plant--\\caterpillar\\($E_{PC}$)}
+        & $\left(\frac{\mu}{\varepsilon a},
+        \frac{r}{a}\left(1-\frac{\mu}{\varepsilon aK}\right),0\right)$
+        & $K>\dfrac{\mu}{\varepsilon a}$
+        & Stable if $\dfrac{\gamma vP^*}{H+P^*}<d$ \\
+        Coexistence\newline ($E_{PCB}$)
+        & $\begin{aligned}
+            P^* &= \frac{\mu}{\varepsilon a}, \\
+            B^* &= \frac{1}{q}\left(\frac{\gamma vP^*}{H+P^*}-d\right), \\
+            C^* &= \frac{1}{a}\left(1-\frac{P^*}{K}\right) \\
+                &\quad\times\left(r+\frac{\beta vB^*}{H+P^*}\right).
+        \end{aligned}$
+        & $K>\dfrac{\mu}{\varepsilon a}$ \newline
+        and $\dfrac{\gamma vP^*}{H+P^*}>d$
+        & Very complicated, but can be stable or unstable, depending on parameters. \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\clearpage
+\section{Equilibrium Calculations}
+
+\subsection{Set the Derivatives Equal to Zero and Factor}
+
+For the plant equation, factor out $P^*$ and then collect the terms containing
+$1-P^*/K$:
+\begin{align*}
+    0 &= rP^*\left(1-\frac{P^*}{K}\right)-aP^*C^*
+    +\beta\frac{vP^*B^*}{H+P^*}\left(1-\frac{P^*}{K}\right) \\
+      &= P^*\left[r\left(1-\frac{P^*}{K}\right)-aC^*
+      +\frac{\beta vB^*}{H+P^*}\left(1-\frac{P^*}{K}\right)\right] \\
+      &= P^*\left[\left(1-\frac{P^*}{K}\right)
+      \left(r+\frac{\beta vB^*}{H+P^*}\right)-aC^*\right].
+\end{align*}
+For the caterpillar and bee equations, factor out $C^*$ and $B^*$:
+\begin{align*}
+    0 &= \varepsilon aP^*C^*-\mu C^*
+       = C^*(\varepsilon aP^*-\mu), \\
+    0 &= \gamma\frac{vP^*B^*}{H+P^*}-dB^*-q(B^*)^2 \\
+      &= B^*\left(\frac{\gamma vP^*}{H+P^*}-d-qB^*\right).
+\end{align*}
+Thus, the equilibrium conditions are
+\begin{align}
+    0 &= P^*\left[\left(1-\frac{P^*}{K}\right)
+    \left(r+\frac{\beta vB^*}{H+P^*}\right)-aC^*\right],
+    \label{eq:plant-equilibrium} \\
+    0 &= C^*(\varepsilon aP^*-\mu),
+    \label{eq:caterpillar-equilibrium} \\
+    0 &= B^*\left(\frac{\gamma vP^*}{H+P^*}-d-qB^*\right).
+    \label{eq:bee-equilibrium}
+\end{align}
+Each product can be zero because its population factor is zero or because
+the remaining factor is zero. We examine these cases separately before
+dividing by any population.
+
+\subsection{Case 1: No Plants ($P^*=0$)}
+
+Substitute $P^*=0$ into Equation~\eqref{eq:caterpillar-equilibrium}:
+\begin{align*}
+    0 &= C^*(\varepsilon a\cdot 0-\mu) \\
+      &= -\mu C^*.
+\end{align*}
+Since $\mu>0$, we obtain $C^*=0$.
+Substitute $P^*=0$ into Equation~\eqref{eq:bee-equilibrium}:
+\begin{align*}
+    0 &= B^*\left(\frac{\gamma v\cdot 0}{H+0}-d-qB^*\right) \\
+      &= -B^*(d+qB^*).
+\end{align*}
+Therefore,
+\[
+    B^*=0
+    \qquad\text{or}\qquad
+    d+qB^*=0
+    \quad\Longrightarrow\quad B^*=-\frac{d}{q}.
+\]
+The second solution is negative, so it is not biologically meaningful.
+The plant equation is already zero because $P^*=0$. Thus, the only
+nonnegative equilibrium without plants is
+\begin{equation}
+    E_0=(0,0,0).
+\end{equation}
+This extinction equilibrium exists for all positive parameter values.
+
+\subsection{Case 2: Plants Present, No Caterpillars ($P^*>0$, $C^*=0$)}
+
+With $C^*=0$, the caterpillar equation is automatically satisfied.
+Substitute $C^*=0$ into Equation~\eqref{eq:plant-equilibrium} and divide
+by $P^*>0$:
+\begin{align*}
+    0 &= P^*\left(1-\frac{P^*}{K}\right)
+    \left(r+\frac{\beta vB^*}{H+P^*}\right), \\
+    0 &= \left(1-\frac{P^*}{K}\right)
+    \left(r+\frac{\beta vB^*}{H+P^*}\right).
+\end{align*}
+Because $r>0$, $H+P^*>0$, and $B^*\geq 0$,
+\[
+    r+\frac{\beta vB^*}{H+P^*}>0.
+\]
+Consequently, the other factor must be zero:
+\begin{align*}
+    1-\frac{P^*}{K} &= 0, \\
+    \frac{P^*}{K} &= 1, \\
+    P^* &= K.
+\end{align*}
+Substitute $P^*=K$ into Equation~\eqref{eq:bee-equilibrium}:
+\[
+    0=B^*\left(\frac{\gamma vK}{H+K}-d-qB^*\right).
+\]
+There are two possibilities.
+
+\subsubsection{No Bees: Plant-Only Equilibrium}
+
+Choose the first factor, $B^*=0$. Together with $P^*=K$ and $C^*=0$, this gives
+\begin{equation}
+    E_P=(K,0,0).
+\end{equation}
+This equilibrium exists for all positive parameter values.
+
+\subsubsection{Bees Present: Plant--Bee Equilibrium}
+
+If $B^*>0$, divide the bee equation by $B^*$ and solve:
+\begin{align*}
+    \frac{\gamma vK}{H+K}-d-qB^* &= 0, \\
+    qB^* &= \frac{\gamma vK}{H+K}-d, \\
+    B^* &= \frac{1}{q}\left(\frac{\gamma vK}{H+K}-d\right).
+\end{align*}
+The plant--bee equilibrium is therefore
+\begin{equation}
+    E_{PB}=\left(K,\,0,\,
+    \frac{1}{q}\left(\frac{\gamma vK}{H+K}-d\right)\right).
+\end{equation}
+The condition for bees to be present is
+$\gamma vK/(H+K)>d$. At equality, $B^*=0$ and this equilibrium coincides
+with $E_P$.
+
+\subsection{Case 3: Plants and Caterpillars Present ($P^*>0$, $C^*>0$)}
+
+Because $C^*>0$, divide Equation~\eqref{eq:caterpillar-equilibrium} by $C^*$:
+\begin{align*}
+    \varepsilon aP^*-\mu &= 0, \\
+    \varepsilon aP^* &= \mu, \\
+    P^* &= \frac{\mu}{\varepsilon a}.
+\end{align*}
+This fixes $P^*$ whenever caterpillars are present.
+
+Next, divide Equation~\eqref{eq:plant-equilibrium} by $P^*>0$ and solve for $C^*$:
+\begin{align*}
+    \left(1-\frac{P^*}{K}\right)
+    \left(r+\frac{\beta vB^*}{H+P^*}\right)-aC^* &= 0, \\
+    aC^* &= \left(1-\frac{P^*}{K}\right)
+    \left(r+\frac{\beta vB^*}{H+P^*}\right), \\
+    C^* &= \frac{1}{a}\left(1-\frac{P^*}{K}\right)
+    \left(r+\frac{\beta vB^*}{H+P^*}\right).
+\end{align*}
+The bee equation becomes
+\[
+    0=B^*\left(\frac{\gamma vP^*}{H+P^*}-d-qB^*\right),
+\]
+which again gives two possibilities.
+
+\subsubsection{No Bees: Plant--Caterpillar Equilibrium}
+
+Set $B^*=0$ in the expression for $C^*$:
+\begin{align*}
+    C^* &= \frac{1}{a}\left(1-\frac{P^*}{K}\right)
+    \left(r+\frac{\beta v\cdot 0}{H+P^*}\right) \\
+        &= \frac{r}{a}\left(1-\frac{P^*}{K}\right) \\
+        &= \frac{r}{a}\left(1-\frac{\mu}{\varepsilon aK}\right).
+\end{align*}
+Thus, the plant--caterpillar equilibrium is
+\begin{equation}
+    E_{PC}=\left(\frac{\mu}{\varepsilon a},\,
+    \frac{r}{a}\left(1-\frac{\mu}{\varepsilon aK}\right),\,0\right).
+\end{equation}
+Because $r/a>0$, caterpillars are strictly positive exactly when
+\begin{align*}
+    1-\frac{\mu}{\varepsilon aK} &> 0, \\
+    \frac{\mu}{\varepsilon aK} &< 1, \\
+    \mu &< \varepsilon aK, \\
+    K &> \frac{\mu}{\varepsilon a}=P^*.
+\end{align*}
+At equality, $C^*=0$ and $E_{PC}$ coincides with $E_P$.
+
+\subsubsection{Bees Present: Three-Population Coexistence Equilibrium}
+
+If $B^*>0$, divide the bee equation by $B^*$ and solve:
+\begin{align*}
+    \frac{\gamma vP^*}{H+P^*}-d-qB^* &= 0, \\
+    qB^* &= \frac{\gamma vP^*}{H+P^*}-d, \\
+    B^* &= \frac{1}{q}
+    \left(\frac{\gamma vP^*}{H+P^*}-d\right).
+\end{align*}
+Substitute this expression into the formula for $C^*$:
+\begin{align*}
+    C^* &= \frac{1}{a}\left(1-\frac{P^*}{K}\right)
+    \left(r+\frac{\beta v}{H+P^*}B^*\right) \\
+        &= \frac{1}{a}\left(1-\frac{P^*}{K}\right)
+    \left[r+\frac{\beta v}{q(H+P^*)}
+    \left(\frac{\gamma vP^*}{H+P^*}-d\right)\right].
+\end{align*}
+Therefore, the three-population equilibrium is
+$E_{PCB}=(P^*,C^*,B^*)$, where
+\begin{equation}
+    \begin{aligned}
+        C^* &= \frac{1}{a}\left(1-\frac{P^*}{K}\right)
+        \left[r+\frac{\beta v}{q(H+P^*)}
+        \left(\frac{\gamma vP^*}{H+P^*}-d\right)\right], \\
+        B^* &= \frac{1}{q}
+        \left(\frac{\gamma vP^*}{H+P^*}-d\right).
+    \end{aligned}
+\end{equation}
+
+To determine when all three populations are positive, first require $B^*>0$.
+Multiplying by the positive quantities $q$ and $H+P^*$ gives
+\begin{align*}
+    \frac{\gamma vP^*}{H+P^*}-d &> 0, \\
+    \gamma vP^*-d(H+P^*) &> 0, \\
+    (\gamma v-d)P^* &> dH.
+\end{align*}
+As in the plant--bee case, this requires $\gamma v>d$. Then
+\[
+    P^*>\frac{dH}{\gamma v-d}.
+\]
+Once $B^*>0$, the factor $r+\beta vB^*/(H+P^*)$ in $C^*$ is positive.
+Since $a>0$, we therefore have
+\begin{align*}
+    C^*>0
+    &\quad\Longleftrightarrow\quad
+    1-\frac{P^*}{K}>0 \\
+    &\quad\Longleftrightarrow\quad K>P^*.
+\end{align*}
+Thus, all three populations are strictly positive exactly when
+\begin{equation}
+    \gamma v>d,
+    \qquad
+    \frac{dH}{\gamma v-d}
+    <\frac{\mu}{\varepsilon a}<K.
+\end{equation}
+Equivalently, these conditions are
+\[
+    K>\frac{\mu}{\varepsilon a}
+    \qquad\text{and}\qquad
+    (\gamma v-d)\mu>dH\varepsilon a.
+\]
+If $B^*=0$, the coexistence formula reduces to $E_{PC}$.
+If $C^*=0$ while $B^*>0$, then $K=P^*$ and it reduces to $E_{PB}$.
+These boundary coincidences do not give additional distinct equilibria.
+
+
+The cases above cover all possibilities. There are eight combinations of
+$P^*$, $C^*$, and $B^*$, where each population can be positive or equal to
+zero. The equilibrium cases we found cover five of these combinations. The remaining three
+have $P^*=0$ and either $C^*>0$, $B^*>0$, or both. However, we showed that
+these cannot be equilibria: if $P^*=0$, the equilibrium equations force
+$C^*=0$ and $B^*=0$. Thus, we have considered all possible nonnegative
+equilibria.
+
+\clearpage
+\section{Stability}
+
+The Jacobian is
+\begin{equation}
+    J(P,C,B)=
+    \begin{pmatrix}
+        J_{11}(P,C,B)
+        & -aP
+        & \dfrac{\beta vP}{H+P}\left(1-\dfrac{P}{K}\right) \\[12pt]
+        \varepsilon aC
+        & \varepsilon aP-\mu
+        & 0 \\[12pt]
+        \dfrac{\gamma vBH}{(H+P)^2}
+        & 0
+        & \dfrac{\gamma vP}{H+P}-d-2qB
+    \end{pmatrix}.
+    \label{eq:general-jacobian}
+\end{equation}
+The upper-left entry is
+\[
+    J_{11}(P,C,B)
+    =r\left(1-\frac{2P}{K}\right)-aC
+    +\frac{\beta vB\left[H(K-2P)-P^2\right]}{K(H+P)^2}.
+\]
+
+
+\subsection{Equilibrium $E_0=(0,0,0)$}
+
+
+\begin{align*}
+    J_{11}(0,0,0)
+        &= r\left(1-\frac{2\cdot 0}{K}\right)-a\cdot 0+0=r, \\
+    J_{12}(0,0,0) &= -a\cdot 0=0,
+        \qquad J_{21}(0,0,0)=\varepsilon a\cdot 0=0, \\
+    J_{13}(0,0,0)
+        &= \frac{\beta v\cdot 0}{H+0}\left(1-\frac{0}{K}\right)=0, \\
+    J_{22}(0,0,0) &= \varepsilon a\cdot 0-\mu=-\mu, \\
+    J_{23}(0,0,0) &= 0,\qquad J_{32}(0,0,0)=0, \\
+    J_{31}(0,0,0) &= \frac{\gamma v\cdot 0\cdot H}{(H+0)^2}=0, \\
+    J_{33}(0,0,0) &= \frac{\gamma v\cdot 0}{H+0}-d-2q\cdot 0=-d.
+\end{align*}
+Therefore,
+\[
+    J(E_0)=J(0,0,0)=
+    \begin{pmatrix}
+        r & 0 & 0 \\
+        0 & -\mu & 0 \\
+        0 & 0 & -d
+    \end{pmatrix}.
+\]
+Thus,
+\[
+    \lambda_1=r,\qquad \lambda_2=-\mu,\qquad \lambda_3=-d.
+\]
+Since all parameters are positive, $\lambda_1>0$ while
+$\lambda_2,\lambda_3<0$. Thus, $E_0$ is an unstable saddle for all positive
+parameter values.
+
+\subsection{Equilibrium $E_P=(K,0,0)$}
+
+Substitute $P=K$, $C=0$, and $B=0$. Because $B=0$, the bee-dependent term
+in $J_{11}$ is zero:
+\begin{align*}
+    J_{11}(K,0,0)
+        &= r\left(1-\frac{2K}{K}\right)-a\cdot 0+0 \\
+        &= r(1-2)=-r, \\
+    J_{12}(K,0,0) &= -aK, \\
+    J_{13}(K,0,0)
+        &= \frac{\beta vK}{H+K}\left(1-\frac{K}{K}\right)
+         =\frac{\beta vK}{H+K}\cdot 0=0, \\
+    J_{21}(K,0,0) &= \varepsilon a\cdot 0=0, \\
+    J_{22}(K,0,0) &= \varepsilon aK-\mu, \\
+    J_{23}(K,0,0) &= 0,\qquad J_{32}(K,0,0)=0, \\
+    J_{31}(K,0,0) &= \frac{\gamma v\cdot 0\cdot H}{(H+K)^2}=0, \\
+    J_{33}(K,0,0) &= \frac{\gamma vK}{H+K}-d-2q\cdot 0
+         =\frac{\gamma vK}{H+K}-d.
+\end{align*}
+Therefore,
+\[
+    J(E_P)=J(K,0,0)=
+    \begin{pmatrix}
+        -r & -aK & 0 \\[6pt]
+        0 & \varepsilon aK-\mu & 0 \\[6pt]
+        0 & 0 & \dfrac{\gamma vK}{H+K}-d
+    \end{pmatrix}.
+\]
+The characteristic polynomial is:
+\begin{align*}
+    0 &= \det(\lambda I-J(E_P)) \\
+      &= (\lambda+r)(\lambda+\mu-\varepsilon aK)
+         \left(\lambda+d-\frac{\gamma vK}{H+K}\right).
+\end{align*}
+Setting each factor equal to zero gives
+\[
+    \lambda_1=-r,\qquad
+    \lambda_2=\varepsilon aK-\mu,\qquad
+    \lambda_3=\frac{\gamma vK}{H+K}-d.
+\]
+ $\lambda_1=-r<0$ automatically.
+For the second eigenvalue,
+\begin{align*}
+    \lambda_2<0
+    &\quad\Longleftrightarrow\quad \varepsilon aK-\mu<0 \\
+    &\quad\Longleftrightarrow\quad \varepsilon aK<\mu \\
+    &\quad\Longleftrightarrow\quad K<\frac{\mu}{\varepsilon a}.
+\end{align*}
+For the third eigenvalue,
+\begin{align*}
+    \lambda_3<0
+    &\quad\Longleftrightarrow\quad \frac{\gamma vK}{H+K}-d<0 \\
+    &\quad\Longleftrightarrow\quad \frac{\gamma vK}{H+K}<d.
+\end{align*}
+Thus, $E_P$ is locally asymptotically stable when both
+\[
+    K<\frac{\mu}{\varepsilon a}
+    \qquad\text{and}\qquad
+    \frac{\gamma vK}{H+K}<d.
+\]
+
+
+\subsection{Equilibrium $E_{PB}$}
+
+\begin{align*}
+    J_{11}(K,0,B^*)
+        &= r\left(1-\frac{2K}{K}\right)-a\cdot 0
+        +\frac{\beta vB^*\left[H(K-2K)-K^2\right]}{K(H+K)^2} \\
+        &= -r+\frac{\beta vB^*(-HK-K^2)}{K(H+K)^2} \\
+        &= -r-\frac{\beta vB^*K(H+K)}{K(H+K)^2} \\
+        &= -r-\frac{\beta vB^*}{H+K}.
+\end{align*}
+\begin{align*}
+    J_{12}(K,0,B^*) &= -aK, \\
+    J_{13}(K,0,B^*)
+        &= \frac{\beta vK}{H+K}\left(1-\frac{K}{K}\right)=0, \\
+    J_{21}(K,0,B^*) &= \varepsilon a\cdot 0=0, \\
+    J_{22}(K,0,B^*) &= \varepsilon aK-\mu, \\
+    J_{23}(K,0,B^*) &= 0,\qquad J_{32}(K,0,B^*)=0, \\
+    J_{31}(K,0,B^*) &= \frac{\gamma vB^*H}{(H+K)^2}, \\
+    J_{33}(K,0,B^*) &= \frac{\gamma vK}{H+K}-d-2qB^* \\
+        &= qB^*-2qB^*=-qB^*.
+\end{align*}
+Thus,
+\[
+    J(E_{PB})=
+    \begin{pmatrix}
+        -r-\dfrac{\beta vB^*}{H+K} & -aK & 0 \\[12pt]
+        0 & \varepsilon aK-\mu & 0 \\[12pt]
+        \dfrac{\gamma vB^*H}{(H+K)^2} & 0 & -qB^*
+    \end{pmatrix}.
+\]
+
+Expanding the determinant along the second row gives
+\begin{align*}
+    0 &= \det(\lambda I-J(E_{PB})) \\
+      &= (\lambda+\mu-\varepsilon aK)
+      \begin{vmatrix}
+          \lambda+r+\dfrac{\beta vB^*}{H+K} & 0 \\[10pt]
+          -\dfrac{\gamma vB^*H}{(H+K)^2} & \lambda+qB^*
+      \end{vmatrix} \\
+      &= (\lambda+\mu-\varepsilon aK)
+      \left(\lambda+r+\frac{\beta vB^*}{H+K}\right)(\lambda+qB^*).
+\end{align*}
+Setting each factor equal to zero gives
+\begin{align*}
+    \lambda_1 &= -r-\frac{\beta vB^*}{H+K}, \\
+    \lambda_2 &= \varepsilon aK-\mu, \\
+    \lambda_3 &= -qB^*.
+\end{align*}
+Since the parameters and $B^*$ are positive, $\lambda_1<0$ and
+$\lambda_3<0$. For the remaining eigenvalue,
+\begin{align*}
+    \lambda_2<0
+    &\quad\Longleftrightarrow\quad \varepsilon aK-\mu<0 \\
+    &\quad\Longleftrightarrow\quad \varepsilon aK<\mu \\
+    &\quad\Longleftrightarrow\quad K<\frac{\mu}{\varepsilon a}.
+\end{align*}
+Therefore, the plant--bee equilibrium with $B^*>0$ is locally
+asymptotically stable when
+\[
+    \frac{\gamma vK}{H+K}>d
+    \qquad\text{and}\qquad
+    K<\frac{\mu}{\varepsilon a}.
+\]
+
+
 \end{document}
