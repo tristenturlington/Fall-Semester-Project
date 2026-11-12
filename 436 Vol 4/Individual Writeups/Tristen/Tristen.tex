@@ -5,9 +5,10 @@
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage{hyperref}
+\usepackage{placeins}
 
 \title{Model Parameterization and Literature Justification:\\Milkweed--Monarch--Bumblebee System}
-\author{Project Parameterization Report}
+\author{Tristen Turlington}
 \date{November 2026}
 
 \begin{document}
@@ -15,7 +16,7 @@
 \maketitle
 
 \section{Background and Prior Literature}
-To ground our differential equation model in empirical ecology, we adopt the common milkweed (\textit{Asclepias syriaca}), monarch butterfly caterpillar (\textit{Danaus plexippus}), and bumblebee (\textit{Bombus} spp.) as our tri-trophic model system. Previous theoretical work by Revilla (2015) modeled plant--herbivore interactions under logistic plant growth and linear herbivory; our Stage 2 model extends this framework by incorporating saturating Type II pollinator visitation and density-dependent pollinator competition.
+To ground our differential equation model in empirical ecology, we adopt the common milkweed (\textit{Asclepias syriaca}), monarch butterfly caterpillar (\textit{Danaus plexippus}), and bumblebee (\textit{Bombus} spp.) as our tri-trophic model system. Previous theoretical work by Revilla (2015)~\cite{revilla2015} modeled plant--herbivore interactions under logistic plant growth and linear herbivory; our Stage 2 model extends this framework by incorporating saturating Type II pollinator visitation and density-dependent pollinator competition.
 
 \section{Dimensional Consistency Verification}
 We verify that all terms in the Stage 2 system maintain dimensional consistency in units of $\text{plants}\cdot\text{day}^{-1}$, $\text{caterpillars}\cdot\text{day}^{-1}$, and $\text{bees}\cdot\text{day}^{-1}$:
@@ -46,26 +47,69 @@ Table~\ref{tab:parameters} summarizes the baseline parameter estimates derived f
 \toprule
 \textbf{Symbol} & \textbf{Value} & \textbf{Units} & \textbf{Biological Meaning \& Literature Justification} \\
 \midrule
-$r$ & $0.015$ & $\text{day}^{-1}$ & \textbf{Intrinsic plant growth rate:} Estimated via $r = \ln(2)/T_{\text{double}}$ assuming an uncrowded clonal milkweed patch doubles in ramet count over $\sim 46\text{ days}$ during the growing season (range: $0.0011\text{--}0.015\ \text{day}^{-1}$; Xerces Society, 2018). \\
+$r$ & $0.015$ & $\text{day}^{-1}$ & \textbf{Intrinsic plant growth rate:} Estimated via $r = \ln(2)/T_{\text{double}}$ assuming an uncrowded clonal milkweed patch doubles in ramet count over $\sim 46\text{ days}$ during the growing season (range: $0.0011\text{--}0.015\ \text{day}^{-1}$)~\cite{xerces2018}. \\
 $K$ & $50$ & $\text{plants}$ & \textbf{Plant carrying capacity:} Baseline patch size of 50 milkweed ramets. \\
-$a$ & $0.00138$ & $(\text{cat}\cdot\text{day})^{-1}$ & \textbf{Herbivory loss rate:} Fraction of plant biomass consumed per caterpillar per day, scaled from empirical leaf area ($94.3\ \text{cm}^2$) and ramet consumption assays (Machado et al., 2023; Grant et al., 2022). \\
-$\epsilon$ & $0.40$ & $\text{cat}\cdot\text{plant}^{-1}$ & \textbf{Caterpillar conversion efficiency:} Accounts for average larval survival ($\sim 58\%$ across nine \textit{Asclepias} species; Pocius et al., 2018) and biomass conversion ($<1$). \\
-$\mu$ & $0.069$ & $\text{day}^{-1}$ & \textbf{Caterpillar exit/mortality rate:} Baseline larval stage duration of $\sim 14.5\text{ days}$ ($\mu \approx 1/14.5$; Pocius et al., 2018). \\
-$v$ & $2428$ & $\text{visits}\cdot(\text{bee}\cdot\text{day})^{-1}$ & \textbf{Maximum bee visitation rate:} Based on $346.9\ \text{min}\cdot\text{day}^{-1}$ foraging time ($5.9\text{ trips/day} \times 58.5\text{ min/trip}$) at $\sim 7\text{ visits}\cdot\text{min}^{-1}$ (Minahan \& Brunet, 2018). \\
+$a$ & $0.00138$ & $(\text{cat}\cdot\text{day})^{-1}$ & \textbf{Herbivory loss rate:} Fraction of plant biomass consumed per caterpillar per day, scaled from empirical leaf area ($94.3\ \text{cm}^2$) and ramet consumption assays~\cite{machado2023, grant2022, neupane2026}. \\
+$\epsilon$ & $0.40$ & $\text{cat}\cdot\text{plant}^{-1}$ & \textbf{Caterpillar conversion efficiency:} Accounts for average larval survival ($\sim 58\%$ across nine \textit{Asclepias} species) and biomass conversion ($<1$)~\cite{pocius2018}. \\
+$\mu$ & $0.069$ & $\text{day}^{-1}$ & \textbf{Caterpillar exit/mortality rate:} Baseline larval stage duration of $\sim 14.5\text{ days}$ ($\mu \approx 1/14.5$)~\cite{pocius2018}. \\
+$v$ & $2428$ & $\text{visits}\cdot(\text{bee}\cdot\text{day})^{-1}$ & \textbf{Maximum bee visitation rate:} Based on $346.9\ \text{min}\cdot\text{day}^{-1}$ foraging time ($5.9\text{ trips/day} \times 58.5\text{ min/trip}$) at $\sim 7\text{ visits}\cdot\text{min}^{-1}$~\cite{minahan2018}. \\
 $H$ & $25$ & $\text{plants}$ & \textbf{Half-saturation plant abundance:} Set to $0.5K$, the plant density at which bee visitation reaches half its maximum rate. \\
-$\beta$ & $0.0005$ & $\text{plants}\cdot\text{visit}^{-1}$ & \textbf{Plant growth per bee visit:} Derived from $0.0149\text{ pods/flower}$ ($0.93\text{ pods} / 62.5\text{ flowers}$; Woods et al., 2012) multiplied by a $1\text{--}5\%$ seedling establishment rate ($0.00015\text{--}0.00075$). \\
+$\beta$ & $0.0005$ & $\text{plants}\cdot\text{visit}^{-1}$ & \textbf{Plant growth per bee visit:} Derived from $0.0149\text{ pods/flower}$ ($0.93\text{ pods} / 62.5\text{ flowers}$)~\cite{woods2012, xerces2018} multiplied by a $1\text{--}5\%$ seedling establishment rate ($0.00015\text{--}0.00075$). \\
 $\gamma$ & $2.96 \times 10^{-5}$ & $\text{bees}\cdot\text{visit}^{-1}$ & \textbf{Bee growth per flower visit:} Calibrated to balance natural mortality at carrying capacity ($\gamma = \frac{d}{v \cdot K/(H+K)}$), representing colony resource conversion into new workers. \\
-$d$ & $0.048$ & $\text{day}^{-1}$ & \textbf{Natural bee mortality rate:} Inverse of mean bumblebee worker lifespan of $20.95\text{ days}$ (range: $17.6\text{--}30\text{ days}$; Da Silva-Matos \& Gar\'ofalo, 2000). \\
+$d$ & $0.048$ & $\text{day}^{-1}$ & \textbf{Natural bee mortality rate:} Inverse of mean bumblebee worker lifespan of $20.95\text{ days}$ (range: $17.6\text{--}30\text{ days}$)~\cite{dasilva2000}. \\
 $q$ & $0.0041$ & $(\text{bee}\cdot\text{day})^{-1}$ & \textbf{Density-dependent bee competition:} Calibrated from $q = \left(\gamma \frac{vP}{H+P} - d\right)/B$ for a foraging density of $B=10\text{ bees}$ in a high-density patch ($P=40$). \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-\section{Connection to Equilibrium Thresholds}
-Using Bella's analytical coexistence condition,
-\begin{equation}
-\frac{dH}{\gamma v - d} < \frac{\mu}{\epsilon a} < K,
-\end{equation}
-our baseline parameters yield an equilibrium plant threshold of $P^* = \frac{\mu}{\epsilon a} = \frac{0.069}{(0.40)(0.00138)} = 125\text{ plants}$. This demonstrates that in a small patch ($K = 50 < 125$), monarch caterpillars cannot sustain a positive equilibrium ($E_{PB}$ is stable instead), whereas in a larger meadow ($K > 125$), three-species coexistence ($E_{PCB}$) becomes biologically feasible.
+\FloatBarrier
+\begin{thebibliography}{9}
 
-\end{document}\documentclass{article}
+\bibitem{revilla2015}
+Tom\'as A. Revilla.
+\newblock Numerical responses in resource-based mutualisms: A time scale approach.
+\newblock \textit{PLoS ONE}, 10(2):e0117964, February 2015.
+
+\bibitem{xerces2018}
+Eric Lee-M\"ader, Brianna Borders, and Ashley Minnerath.
+\newblock \textit{Milkweeds: A Conservation Practitioner's Guide}.
+\newblock The Xerces Society for Invertebrate Conservation, Portland, OR, 2018.
+
+\bibitem{machado2023}
+Daniela D. Machado, Scott R. McArt, and Anurag A. Agrawal.
+\newblock Aphids alter milkweed chemical defenses and reduce monarch caterpillar feeding and growth.
+\newblock \textit{PLoS ONE}, 18(7):e0288407, July 2023.
+
+\bibitem{grant2022}
+Tyler J. Grant, John M. Pleasants, and Steven P. Bradbury.
+\newblock Modeling monarch butterfly (\textit{Danaus plexippus}) larval survival and milkweed consumption across agricultural landscapes.
+\newblock \textit{BioScience}, 72(12):1176--1187, December 2022.
+
+\bibitem{neupane2026}
+Kiran Neupane et al.
+\newblock Leaf position effects on neonate and third-instar monarch caterpillar feeding and growth on milkweed.
+\newblock \textit{Journal of Insect Science} (PMC12942626), 2026.
+
+\bibitem{pocius2018}
+Victoria M. Pocius, John M. Pleasants, Diane M. Debinski, Keith G. Bidne, Richard L. Hellmich, Steven P. Bradbury, and Karen S. Oberhauser.
+\newblock Monarch butterfly (\textit{Danaus plexippus}) larval survival and development on nine native milkweed species.
+\newblock \textit{Environmental Entomology}, 47(2):414--422, April 2018.
+
+\bibitem{minahan2018}
+Danny F. Minahan and Johanne Brunet.
+\newblock Strong interspecific differences in foraging activity observed between honey bees and bumble bees using miniaturized radio frequency identification (RFID).
+\newblock \textit{Frontiers in Ecology and Evolution}, 6:156, October 2018.
+
+\bibitem{woods2012}
+E. C. Woods, A. P. Hastings, N. E. Turley, S. B. Heard, and A. A. Agrawal.
+\newblock Adaptive geographical clines in the growth and defense of a native plant.
+\newblock \textit{Ecological Monographs}, 82(2):149--168, May 2012.
+
+\bibitem{dasilva2000}
+Eunice V. Da Silva-Matos and Carlos A. Gar\'ofalo.
+\newblock Worker life tables, survivorship, and longevity in colonies of \textit{Bombus (Fervidobombus) atratus} (Hymenoptera: Apidae).
+\newblock \textit{Revista de Biolog\'ia Tropical}, 48(2--3):657--664, June 2000.
+
+\end{thebibliography}
+
+\end{document}
