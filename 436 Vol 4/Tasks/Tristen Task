@@ -1,0 +1,94 @@
+Since Bella wrote the model paramters, I am trying to find real world parameter numbers that acnchor our findings in theoretical work.
+Right now all of our work is in terms of r, K, a, eps, mu, etc.
+My job is to turn these symbols into biology to actually show what is happening in nature.
+
+# note
+this lowkey has equations like ours and observing herbivore vs plants: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0117964     maybe this could be "what we know alreayd exists"
+
+1. Check if Parameter/ Parameter equations are dimensionally consistient.
+    Plant equation dP/ dt which is plants/day
+        rP(1- P/K) - aPC
+        rP(1 - P/K) = day^-1 (plants) (1-P/K) is dimensionless = plants/day
+        aPC = caterpillar/day (plants) (caterpillar) = plants/day
+        for model 2:
+        beta (vPB/ (H+P)) (1- P/K) = plants/ visit (visits/ bee * day)(plants)(bees) / (plants) = plants/day
+
+    Caterpillar equation dC/dt
+    
+    Bee equation
+
+2. Technically i have to pick a specific model system with three different species
+    for now lets go with milkweed/ monarch / bumblebee
+
+3. What numbers I am looking for 
+    1. bees visitation rates
+    2. population efficiency
+    3. resource convervation
+    4. bee death rate
+
+4. Findings
+- let K = 50 (plant carrying capcity) for the size data we want to consider
+- mu natural caterpillar mortality rate
+    The 30%–75% larval survival probability range across the nine milkweed species (~58% average), the ~14–15 day larval stage and 9–11 day pupal stage durations, and the baseline exit rate calculation (mu ~ 1/14.5 ~ 0.069 day^-1)
+    https://pmc.ncbi.nlm.nih.gov/articles/PMC5850784/
+- a - rate of plant loss due to monarchs(caterpillars) eating them OR (the fraction of the existing plant population P that a single caterpillar consumes per day)
+    Monarch larvae fed leaves from aphid-free milkweed consumed significantly more leaf material than larvae fed leaves from either aphid-infested treatment (Fig 2, F2,24 = 8.27, P = 0.001). Larvae that fed on aphid-free leaves ate an average of 94.3 cm2 (± 4.44), with a range of 71.7–109.1 cm2, nearly twice the leaf material consumed by larvae fed aphid-infested “dirty” (56.1 cm2 ± 8.52 with a range of 12.4–93.9 cm2) and aphid-infested “cleaned” (63.8 cm2 ± 7.47 with a range of 21.4–80.8 cm2) leaf treatments.
+    https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0288407
+    In 24 h no-choice assays, neonates consumed similar amounts of leaf material when provided only top leaves (2.84 ± 0.28 mg) or bottom leaves (2.58 ± 0.31 mg) of milkweed plants, with no significant difference in biomass consumed (df = 1, 149; F = 0.270; p = 0.6042). However, neonates fed top leaves gained significantly more weight (5.02 ± 0.33 mg) than those fed bottom leaves (3.37 ± 0.24 mg; df = 1, 149; f = 13.366; p = 0.0004). Third instars provided with top leaves consumed significantly more biomass (19.35 ± 1.44 mg) than those provided bottom leaves (15.71 ± 0.84 mg; df = 1, 171; F = 9.154; p = 0.0029), and similarly gained more weight when fed top leaves (31.40 ± 2.10 mg) compared to bottom leaves 25.36 ± 1.64 mg; (df = 1, 171; F = 8.904; p = 0.0033).
+    https://pmc.ncbi.nlm.nih.gov/articles/PMC12942626/
+    Larvae consumed biomass from three or four milkweed ramets that totaled the approximate biomass of a single 10 to 35-cm ramet. 
+    https://academic.oup.com/bioscience/article/72/12/1176/6808907
+    That number circulates widely in monarch outreach materials (such as Texas Butterfly Ranch and Monarch Joint Venture / Save Our Monarchs), usually referring to small leaves or a ~200× increase in body weight from hatchling to 5th instar. For an academic modeling project, using PMC12942626 (dry mass in mg), Grant et al. (2022) / Fisher et al. (2020) (1 whole 10–35 cm ramet per larva), or Machado et al. (2023) (cm²/day) is much cleaner and directly verifiable in peer-reviewed tables.
+    a = 0.00138 ~ (caterpillars * day)^-1
+- r - intrinsic plant growth rate
+    ln(2) - logistic growth
+    r = ln(2) / the time it takes to double in size
+    r = 0.6931 / 365
+    r = 0.6931/ 120
+    different milkweed grow at different rates
+    Note that field studies report annual or seasonal stem multiplication rather than daily rates, and compute $r = \frac{\ln(1.5)}{120} \approx 0.0034\ \text{day}^{-1}$ (for a 120-day growing season) or $r \approx 0.0011\text{–}0.0058\ \text{day}^{-1}$ as your baseline range.
+    milkweed are self-incompatible (they cannot reproduce by themselves)
+    Because empirical studies report seasonal vegetative spread rather than daily intrinsic growth rates, we estimate $r \approx 0.015\text{ day}^{-1}$ using the standard doubling-time relation $r = \ln(2)/T_{\text{double}}$, assuming an uncrowded clonal milkweed patch doubles in stem count over roughly $46\text{ days}$ during the summer growing season
+    https://www.xerces.org/sites/default/files/2018-05/17-031_02_XercesSoc_Milkweeds-Conservation-Guide_web.pdf
+
+- beta - additional plant growth growth per bee flower visit
+    1-2 seeds per pod: https://www.xerces.org/sites/default/files/2018-05/17-031_02_XercesSoc_Milkweeds-Conservation-Guide_web.pdf
+    Dividing 1 to 2 pods by ~50 to 100 flowers per umbel gives pod-to-flower ratio 1-4%, lets call is ~0.02
+    https://pmc.ncbi.nlm.nih.gov/articles/PMC4080991/
+    0.93 pods/ 62.5 flowers = 0.0149 flowers set seed
+    beacuse each flower typically recieves roughly 1 to 1.5 pollinaia insetons, each bee visit yields roughly 0.015 pods/vists. Since only a small fraction of seeds survive in a patch, (1%-5%)
+    beta = 0.015 pods/visit * (0.01 to 0.05) ~ anywhere from 0.00015 to 0.00075
+    beta = 0.0005         # not much as we expected
+- v - maximum flower visits per bee
+    https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2018.00156/full
+    foraging trips per day: 5.9 +- 0.4
+    average duration per trip 58.5 +- 2.0 min/trip
+    total foraging time per day: 346.9 +- 16.2 min/day
+    v = 346.9 (min/ bee*day) * 7 visits/ min = 2428 visits (bee * day)
+- H - plant abundance at which visitation per bee plants reaches half its max
+    H = 0.5* K = 25 plants
+- d - natural bee mortality rate
+    bumblebees live anywhere from 17.6 to 30 days 
+    1/ 20.95 (average) = 0.048 day^-1
+    https://www.scielo.sa.cr/scielo.php?script=sci_arttext&pid=S0034-77442000000200038
+
+- gamma - bee population growth contribution per flower visit
+    v = 2428
+    K/H+K = 50/75 = 0.6667
+    gamma = d/ v * (0.667) = 0.048/ 2428(0.667) = 00002963921 bees/visit
+
+- q - strength of density - dependent bee competition
+    q is a formula for numbers we found before
+    q = ( gamma * (vP/ H+ P) - d)/ (B)
+    q = (6*10^-5)(2500)(40/15+40) - (0.048)        /    10 = 0.0061
+- eps - efficiency of converting plant losses into caterpillar population growth
+    eps basically < 1
+    eps = (0.5 to 1) caterpillars/plant * 0.58 - 0.29 to 0.58 caterpillars/plant
+    lets pick eps = 0.4 caterpillars/plant
+
+
+
+
+
+
+--- Further research: In real life, adult monarch butterflies also nectar on milkweed flowers and occasionally transfer pollinia (though far less effectively than bumblebees), and caterpillars are only the juvenile stage of an adult butterfly rather than a separate self-reproducing species. Highlighting that your model treats caterpillars as an independent consumer population and isolates pollination to bumblebees is a great biological critique
