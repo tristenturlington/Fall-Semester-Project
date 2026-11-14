@@ -20,3 +20,28 @@ rerun solutions with actual values
 Additional Tasks
 Application Questions
 Writeup
+
+New Tasks
+- The stated q calculation gives q = -0.000377 instead of q = 0.0041. To keep
+  q = 0.0041, change gamma to be 5.96e-5. This balances mortality and competition
+
+- With the current parameters, mu/(eps*a) = 0.069/(0.40*0.00138) = 125 plants.
+
+- For Model 1, K = 125 is the bifurcation point. Below 125, the
+  plant-only equilibrium is stable. Above 125, it becomes unstable and the
+  plant-caterpillar coexistence equilibrium is positive and stable
+- For Model 2, K > 125 also allows a positive plant-caterpillar
+  equilibrium and possibly coexistence
+
+- Make the K bifurcation diagrams cover enough of the range above 125.
+  Something like 0 to 200 would give us more room to see what happen
+
+- We don't need to put a set K, we can just look what happens as K varies like we are doing in our bifurcation diagrams
+
+
+abstract - tristen
+background and motivation - bella
+model 1 ashtyn
+model 2 bella
+interventions - Bella / tristen (make plots today) 
+analysis and conclusion - ashtyn

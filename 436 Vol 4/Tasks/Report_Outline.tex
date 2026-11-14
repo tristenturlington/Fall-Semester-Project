@@ -1,0 +1,298 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage[hidelinks]{hyperref}
+
+\title{Math 436 Project: Report Outline\\Plants, Caterpillars, and Bees}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Writing Assignments}
+
+\begin{itemize}
+    \item Abstract -- Tristen
+    \item Background and Motivation -- Bella
+    \item Model 1 -- Ashtyn
+    \item Model 2 -- Bella
+    \item Interventions -- Bella / Tristen (make plots today)
+    \item Analysis and Conclusion -- Ashtyn
+\end{itemize}
+
+\section*{New Tasks}
+
+\begin{itemize}
+    \item The stated $q$ calculation gives $q=-0.000377$ instead of
+    $q=0.0041$. To keep $q=0.0041$, change $\gamma$ to
+    $5.96\times10^{-5}$. This balances mortality and competition at the
+    reference populations of 40 plants and 10 bees.
+    \item With the current parameters,
+    $\mu/(\varepsilon a)=0.069/[0.40(0.00138)]=125$ plants.
+    \item For Model 1, $K=125$ is the bifurcation point. Below 125, the
+    plant-only equilibrium is stable. Above 125, it becomes unstable and
+    the plant--caterpillar coexistence equilibrium is positive and stable.
+    \item For Model 2, $K>125$ also allows a positive plant--caterpillar
+    equilibrium and possibly coexistence.
+    \item Make the $K$ bifurcation diagrams cover enough of the range above
+    125. Something like 0 to 200 would give us more room to see what happens.
+    \item We don't need to choose one fixed $K$; we can look at what happens
+    as $K$ varies in our bifurcation diagrams.
+\end{itemize}
+
+This is a writing plan for the final report. The main story is to start with
+herbivory, add pollination, compare how the models behave, and then test which
+interventions help the plants. Write the results and conclusions after the
+simulations are finished.
+
+\section{Abstract}
+
+Write this last. Use one paragraph to cover:
+\begin{itemize}
+    \item We model flowering plants, caterpillars, and bees to study herbivory
+    and pollination together.
+    \item We start with a plant--caterpillar model, then add bees as mutualists.
+    \item We compare equilibrium behavior as carrying capacity changes and
+    simulate interventions.
+    \item State the main findings: what helped plants, what happened to the
+    other populations, and any important limitations.
+\end{itemize}
+
+\section{Background and Motivation}
+
+Write about:
+\begin{itemize}
+    \item Why flowering plants matter and how herbivory and pollination
+    affect them.
+    \item Why it is useful to consider these interactions together.
+    \item The milkweed--monarch--bumblebee example, explaining that it
+    motivates a simplified model.
+    \item Previous work on predator--prey models and plant--pollinator
+    interactions. Use relevant sources Tristen found, after checking the
+    citations.
+    \item How our project builds on these approaches by examining a resource
+    shared by a consumer and a mutualist.
+\end{itemize}
+
+End with the questions we will investigate:
+\begin{quote}
+How does adding bees change plant--caterpillar dynamics? Under what conditions
+can the populations persist, and how effectively do bee support, reduced
+herbivory, and their combination maintain plant abundance and stability?
+\end{quote}
+
+\section{Modeling}
+
+\subsection{Stage 1: Plants and Caterpillars}
+
+Introduce $P$, $C$, and time measured in days. Present the equations:
+\begin{align*}
+    \frac{dP}{dt} &= rP\left(1-\frac{P}{K}\right)-aPC, \\
+    \frac{dC}{dt} &= \varepsilon aPC-\mu C.
+\end{align*}
+
+Explain the terms and assumptions:
+\begin{itemize}
+    \item Plants grow logistically.
+    \item Caterpillar consumption depends on both populations.
+    \item Plant consumption supports caterpillar population growth.
+    \item Caterpillars leave the population at a constant per-capita rate.
+    \item Parameters are constant, and spatial differences and life stages
+    are omitted.
+\end{itemize}
+
+Briefly give the three equilibria and their stability results. Explain that
+the proposed shared parameter values give
+\[
+    \frac{\mu}{\varepsilon a}
+    =\frac{0.069}{0.40(0.00138)}=125.
+\]
+
+\paragraph{Insert Figure 1: Ashtyn's Model 1 results.}
+Use her two $K$-bifurcation panels, updated to the shared parameters and a
+range extending beyond 125. Include a representative time simulation as a
+small additional panel.
+
+Discuss:
+\begin{itemize}
+    \item Below 125, the plant-only equilibrium is stable.
+    \item Above 125, caterpillars can persist and the plant-only equilibrium
+    becomes unstable.
+    \item Once caterpillars persist, increasing $K$ supports more caterpillars
+    while equilibrium plant abundance remains at 125.
+\end{itemize}
+
+Then explain why we introduce Stage 2:
+\begin{quote}
+Model 1 provides a baseline for herbivory, but cannot answer how pollinators
+affect plants or whether supporting bees changes the outcome.
+\end{quote}
+
+\subsection{Stage 2: Adding Bees}
+
+Introduce $B$ and present the equations:
+\begin{align*}
+    \frac{dP}{dt}
+        &= rP\left(1-\frac{P}{K}\right)-aPC
+        +\beta\frac{vPB}{H+P}\left(1-\frac{P}{K}\right), \\
+    \frac{dC}{dt} &= \varepsilon aPC-\mu C, \\
+    \frac{dB}{dt} &= \gamma\frac{vPB}{H+P}-dB-qB^2.
+\end{align*}
+
+Explain the additional assumptions:
+\begin{itemize}
+    \item Visitation per bee increases with plant abundance but saturates.
+    \item Flower visits benefit plant reproduction and bee population growth.
+    \item Plant growth remains limited by $K$.
+    \item Bees experience natural mortality and competition.
+    \item Bees and caterpillars interact indirectly through plants.
+\end{itemize}
+
+Include one parameter table with values, units, and sources or assumptions.
+Identify which values are measured estimates and which are calibrated.
+Explain that $K$ varies between scenarios while the other parameters remain
+fixed during its sweep.
+
+Include the compact equilibrium, existence, and stability table. Briefly
+explain how Jacobian eigenvalues determine stability. Keep the entry-by-entry
+algebra in the working notes.
+
+\subsection{Numerical Experiments}
+
+Specify the solver, initial conditions, time horizon, and parameters used.
+Explain that we will:
+\begin{itemize}
+    \item Compare Models 1 and 2 using the same shared parameters.
+    \item Vary $K$ from a small positive value to around 200.
+    \item Compare four intervention scenarios from the same starting state
+    and intervention time.
+    \item Represent ongoing bee support by reducing $d$, and reduced
+    herbivory by lowering $a$, if these remain the chosen interventions.
+    \item State the intervention strengths clearly.
+\end{itemize}
+
+\section{Results}
+
+\subsection{Comparison as Carrying Capacity Changes}
+
+\paragraph{Insert Figure 2: Model 1 versus Model 2 bifurcation diagrams.}
+Use three panels: equilibrium plants, caterpillars, and bees versus $K$.
+Distinguish models by color and stable/unstable branches by solid/dashed
+lines. Keep $H$, $\gamma$, $q$, and the other parameters fixed while $K$
+changes.
+
+Discuss what the actual plots show:
+\begin{itemize}
+    \item Where each population combination becomes possible.
+    \item Whether bees increase the supported caterpillar population.
+    \item Whether plant equilibrium abundance changes.
+    \item Whether adding mutualism changes stability as $K$ increases.
+    \item How Model 2 extends or changes Ashtyn's results.
+\end{itemize}
+
+Explain the additional coexistence requirement: the plant abundance
+maintained alongside caterpillars must also support bee growth sufficient
+to overcome mortality.
+
+\subsection{Interventions to Support Plants}
+
+Choose a representative $K$ from the bifurcation diagram where the
+interactions we want to study are active.
+
+\paragraph{Insert Figure 3: Plant abundance over time under four scenarios.}
+\begin{enumerate}
+    \item No intervention.
+    \item Bee support.
+    \item Reduced herbivory.
+    \item Both together.
+\end{enumerate}
+Add bee and caterpillar panels if they help explain the plant response.
+
+Discuss:
+\begin{itemize}
+    \item Which treatment gives higher plant abundance?
+    \item Which prevents the lowest plant populations?
+    \item Which reduces fluctuations or improves recovery?
+    \item Does an initial improvement last?
+    \item Do additional caterpillars eventually consume the extra plant
+    production?
+\end{itemize}
+
+Include a small results table comparing average plant abundance, minimum
+plant abundance, and fluctuation size over the same time period.
+
+\subsection{Checks That the Model Behaves Sensibly}
+
+Briefly report checks such as:
+\begin{itemize}
+    \item With bees initially absent, Model 2 reproduces Model 1.
+    \item With both animals absent, plants follow logistic growth.
+    \item Numerical equilibrium behavior agrees with the analytical
+    predictions.
+    \item Populations remain nonnegative.
+\end{itemize}
+These establish internal consistency. Separately discuss any agreement with
+biological evidence.
+
+\section{Analysis and Conclusions}
+
+Answer the original questions using the results. Explain:
+\begin{itemize}
+    \item What adding bees taught us that Model 1 could not show.
+    \item Which intervention helped plants under the conditions tested.
+    \item Whether combining interventions provided additional benefits.
+    \item Whether benefits depended on environmental capacity or
+    intervention strength.
+\end{itemize}
+
+Discuss the possibility that more plant production can support more
+caterpillars while leaving equilibrium plant abundance unchanged.
+
+Evaluate the assumptions:
+\begin{itemize}
+    \item One plant variable represents both leaf resources and floral
+    resources.
+    \item Plants can grow without the modeled bees.
+    \item Life stages, seasons, spatial differences, and developmental
+    delays are omitted.
+    \item Some parameters are rough estimates.
+    \item Intervention rankings depend on the chosen model and
+    intervention strengths.
+\end{itemize}
+
+Describe real revisions we made, including the progression from Model 1 to
+Model 2 and any changes prompted by simulations. For example, the bee
+calibration needed to account for competition as well as natural mortality.
+
+End with what we would improve with more time: better parameter estimation,
+seasonal effects, separate plant biomass or flower resources, or explicit
+insect life stages. Keep the conclusions tied to what the simulations
+actually establish.
+
+\section{AI Disclosure}
+
+Describe the AI assistance actually used: LaTeX drafting and editing,
+equilibrium and stability calculations/checks, parameter consistency checks,
+simulation planning, and any later coding assistance. Explain what the group
+independently checked.
+
+\section*{Final Report Checks}
+
+\begin{itemize}
+    \item Use the provided report template without changing its margins or
+    fonts. This outline is a planning document, not that template.
+    \item Keep the final group report within 10 pages, excluding the
+    bibliography. Prioritize the model explanations, compact mathematical
+    summaries, and three main figures over the full algebra.
+    \item Include a numerical time simulation for each model, not only
+    equilibrium diagrams.
+    \item Give figures readable labels, units, legends, and captions that
+    identify the parameters and explain the main point.
+    \item Check that citations match the papers and parameter claims.
+    \item Attach a well-documented Jupyter notebook showing the code used.
+    \item Leave the heatmap optional until we know whether it would answer
+    a question the other figures leave open.
+\end{itemize}
+
+\end{document}
