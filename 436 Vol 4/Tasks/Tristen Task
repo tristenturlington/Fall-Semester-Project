@@ -31,6 +31,7 @@ this lowkey has equations like ours and observing herbivore vs plants: https://j
 - mu natural caterpillar mortality rate
     The 30%–75% larval survival probability range across the nine milkweed species (~58% average), the ~14–15 day larval stage and 9–11 day pupal stage durations, and the baseline exit rate calculation (mu ~ 1/14.5 ~ 0.069 day^-1)
     https://pmc.ncbi.nlm.nih.gov/articles/PMC5850784/
+
 - a - rate of plant loss due to monarchs(caterpillars) eating them OR (the fraction of the existing plant population P that a single caterpillar consumes per day)
     Monarch larvae fed leaves from aphid-free milkweed consumed significantly more leaf material than larvae fed leaves from either aphid-infested treatment (Fig 2, F2,24 = 8.27, P = 0.001). Larvae that fed on aphid-free leaves ate an average of 94.3 cm2 (± 4.44), with a range of 71.7–109.1 cm2, nearly twice the leaf material consumed by larvae fed aphid-infested “dirty” (56.1 cm2 ± 8.52 with a range of 12.4–93.9 cm2) and aphid-infested “cleaned” (63.8 cm2 ± 7.47 with a range of 21.4–80.8 cm2) leaf treatments.
     https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0288407
@@ -40,6 +41,7 @@ this lowkey has equations like ours and observing herbivore vs plants: https://j
     https://academic.oup.com/bioscience/article/72/12/1176/6808907
     That number circulates widely in monarch outreach materials (such as Texas Butterfly Ranch and Monarch Joint Venture / Save Our Monarchs), usually referring to small leaves or a ~200× increase in body weight from hatchling to 5th instar. For an academic modeling project, using PMC12942626 (dry mass in mg), Grant et al. (2022) / Fisher et al. (2020) (1 whole 10–35 cm ramet per larva), or Machado et al. (2023) (cm²/day) is much cleaner and directly verifiable in peer-reviewed tables.
     a = 0.00138 ~ (caterpillars * day)^-1
+
 - r - intrinsic plant growth rate
     ln(2) - logistic growth
     r = ln(2) / the time it takes to double in size
@@ -59,14 +61,17 @@ this lowkey has equations like ours and observing herbivore vs plants: https://j
     beacuse each flower typically recieves roughly 1 to 1.5 pollinaia insetons, each bee visit yields roughly 0.015 pods/vists. Since only a small fraction of seeds survive in a patch, (1%-5%)
     beta = 0.015 pods/visit * (0.01 to 0.05) ~ anywhere from 0.00015 to 0.00075
     beta = 0.0005         # not much as we expected
+
 - v - maximum flower visits per bee
     https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2018.00156/full
     foraging trips per day: 5.9 +- 0.4
     average duration per trip 58.5 +- 2.0 min/trip
     total foraging time per day: 346.9 +- 16.2 min/day
     v = 346.9 (min/ bee*day) * 7 visits/ min = 2428 visits (bee * day)
+
 - H - plant abundance at which visitation per bee plants reaches half its max
     H = 0.5* K = 25 plants
+
 - d - natural bee mortality rate
     bumblebees live anywhere from 17.6 to 30 days 
     1/ 20.95 (average) = 0.048 day^-1
@@ -74,13 +79,14 @@ this lowkey has equations like ours and observing herbivore vs plants: https://j
 
 - gamma - bee population growth contribution per flower visit
     v = 2428
-    K/H+K = 50/75 = 0.6667
-    gamma = d/ v * (0.667) = 0.048/ 2428(0.667) = 00002963921 bees/visit
+    H = 25
+    gamma = 2d/ (vK/(H+K)) = 0.096 / 1618.67 = 5.93 x 10^-5
 
 - q - strength of density - dependent bee competition
     q is a formula for numbers we found before
     q = ( gamma * (vP/ H+ P) - d)/ (B)
-    q = (6*10^-5)(2500)(40/15+40) - (0.048)        /    10 = 0.0061
+    q = (5.93x10^-5)(2428)(40/65) - (0.048)     /    10 =  0.00406
+
 - eps - efficiency of converting plant losses into caterpillar population growth
     eps basically < 1
     eps = (0.5 to 1) caterpillars/plant * 0.58 - 0.29 to 0.58 caterpillars/plant

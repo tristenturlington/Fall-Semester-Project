@@ -16,7 +16,7 @@
 \maketitle
 
 \section{Background and Prior Literature}
-To ground our differential equation model in empirical ecology, we adopt the common milkweed (\textit{Asclepias syriaca}), monarch butterfly caterpillar (\textit{Danaus plexippus}), and bumblebee (\textit{Bombus} spp.) as our tri-trophic model system. Previous theoretical work by Revilla (2015)~\cite{revilla2015} modeled plant--herbivore interactions under logistic plant growth and linear herbivory; our Stage 2 model extends this framework by incorporating saturating Type II pollinator visitation and density-dependent pollinator competition.
+While researching, we came across previous theoretical work by Revilla (2015)~\cite{revilla2015} that modeled plant--pollinator associations. Their research explored the relationships between caterpillars, flowers, vegetative growth, and insect pollinators. Ultimately, their focus was on understanding how relationships within an environment can be classified as either mutualistic or antagonistic, using data to support these interactions. Our research is particularly focused on common milkweed (\textit{Asclepias syriaca}), monarch butterfly caterpillar (\textit{Danaus plexippus}), and bumblebee (\textit{Bombus} spp.).
 
 \section{Dimensional Consistency Verification}
 We verify that all terms in the Stage 2 system maintain dimensional consistency in units of $\text{plants}\cdot\text{day}^{-1}$, $\text{caterpillars}\cdot\text{day}^{-1}$, and $\text{bees}\cdot\text{day}^{-1}$:
@@ -36,7 +36,7 @@ We verify that all terms in the Stage 2 system maintain dimensional consistency 
 \end{align}
 
 \section{Baseline Parameter Values}
-Table~\ref{tab:parameters} summarizes the baseline parameter estimates derived from empirical studies on \textit{Asclepias}, \textit{Danaus plexippus}, and \textit{Bombus} foraging dynamics.
+Table~\ref{tab:parameters} summarizes the baseline parameter estimates derived from literature studies on common milkweed, monarch butterfly caterpillar, and bumblebee dynamics.
 
 \begin{table}[htbp]
 \centering
@@ -52,12 +52,12 @@ $K$ & $50$ & $\text{plants}$ & \textbf{Plant carrying capacity:} Baseline patch 
 $a$ & $0.00138$ & $(\text{cat}\cdot\text{day})^{-1}$ & \textbf{Herbivory loss rate:} Fraction of plant biomass consumed per caterpillar per day, scaled from empirical leaf area ($94.3\ \text{cm}^2$) and ramet consumption assays~\cite{machado2023, grant2022, neupane2026}. \\
 $\epsilon$ & $0.40$ & $\text{cat}\cdot\text{plant}^{-1}$ & \textbf{Caterpillar conversion efficiency:} Accounts for average larval survival ($\sim 58\%$ across nine \textit{Asclepias} species) and biomass conversion ($<1$)~\cite{pocius2018}. \\
 $\mu$ & $0.069$ & $\text{day}^{-1}$ & \textbf{Caterpillar exit/mortality rate:} Baseline larval stage duration of $\sim 14.5\text{ days}$ ($\mu \approx 1/14.5$)~\cite{pocius2018}. \\
-$v$ & $2428$ & $\text{visits}\cdot(\text{bee}\cdot\text{day})^{-1}$ & \textbf{Maximum bee visitation rate:} Based on $346.9\ \text{min}\cdot\text{day}^{-1}$ foraging time ($5.9\text{ trips/day} \times 58.5\text{ min/trip}$) at $\sim 7\text{ visits}\cdot\text{min}^{-1}$~\cite{minahan2018}. \\
+$v$ & $2428$ & $\text{visits}\cdot(\text{bee}\cdot\text{day})^{-1}$ & \textbf{Maximum bee visitation rate:} Based on $346.9\ \text{min}\cdot\text{day}^{-1}$ foraging time ($5.93\text{ trips/day} \times 58.5\text{ min/trip}$) at $\sim 7\text{ visits}\cdot\text{min}^{-1}$~\cite{minahan2018}. \\
 $H$ & $25$ & $\text{plants}$ & \textbf{Half-saturation plant abundance:} Set to $0.5K$, the plant density at which bee visitation reaches half its maximum rate. \\
 $\beta$ & $0.0005$ & $\text{plants}\cdot\text{visit}^{-1}$ & \textbf{Plant growth per bee visit:} Derived from $0.0149\text{ pods/flower}$ ($0.93\text{ pods} / 62.5\text{ flowers}$)~\cite{woods2012, xerces2018} multiplied by a $1\text{--}5\%$ seedling establishment rate ($0.00015\text{--}0.00075$). \\
-$\gamma$ & $2.96 \times 10^{-5}$ & $\text{bees}\cdot\text{visit}^{-1}$ & \textbf{Bee growth per flower visit:} Calibrated to balance natural mortality at carrying capacity ($\gamma = \frac{d}{v \cdot K/(H+K)}$), representing colony resource conversion into new workers. \\
+$\gamma$ & $5.93 \times 10^{-5}$ & $\text{bees}\cdot\text{visit}^{-1}$ & \textbf{Bee growth per flower visit:} Calibrated so that the per-capita bee birth rate at carrying capacity is twice the natural mortality rate ($\gamma = \frac{2d}{v \cdot K/(H+K)} = \frac{2(0.048)}{2428 \cdot 50/75}$), representing colony resource conversion into new workers. \\
 $d$ & $0.048$ & $\text{day}^{-1}$ & \textbf{Natural bee mortality rate:} Inverse of mean bumblebee worker lifespan of $20.95\text{ days}$ (range: $17.6\text{--}30\text{ days}$)~\cite{dasilva2000}. \\
-$q$ & $0.0041$ & $(\text{bee}\cdot\text{day})^{-1}$ & \textbf{Density-dependent bee competition:} Calibrated from $q = \left(\gamma \frac{vP}{H+P} - d\right)/B$ for a foraging density of $B=10\text{ bees}$ in a high-density patch ($P=40$). \\
+$q$ & $0.00406$ & $(\text{bee}\cdot\text{day})^{-1}$ & \textbf{Density-dependent bee competition:} Calibrated from $q = \left(\gamma \frac{vP}{H+P} - d\right)/B = \left((5.93\times10^{-5})(2428)\frac{40}{25+40} - 0.048\right)/10$ for a foraging density of $B=10\text{ bees}$ in a high-density patch ($P=40$). \\
 \bottomrule
 \end{tabularx}
 \end{table}
