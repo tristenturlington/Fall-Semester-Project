@@ -32,15 +32,15 @@ In this paper, we explore ODE-based models for the fluctuations of plant, caterp
 %% First Section
 \section{Background/Motivation}
 
-Plants support ecosystems by providing food for consumers and releasing oxygen through photosynthesis [citation needed]. Therefore, conserving struggling plant populations is essential and requires interventions that support plants without eliminating other species. Caterpillars consume plant leaves through herbivory, which can reduce plant growth and place additional pressure on vulnerable populations [citation needed]. Bees, in contrast, have a mutualistic relationship with flowering plants: they collect nectar and pollen while transferring pollen between flowers, helping plants reproduce [citation needed]. These opposing effects raise the question of whether supporting bees can compensate for plant loss from caterpillars.
+Plants support ecosystems by providing food for consumers and releasing oxygen through photosynthesis~\cite{johnson2016}. Therefore, conserving struggling plant populations is essential and requires interventions that support plants without eliminating other species. Caterpillars consume plant leaves through herbivory~\cite{grant2022}, which can reduce plant growth and place additional pressure on vulnerable populations. Bees, in contrast, have a mutualistic relationship with flowering plants: they collect nectar and pollen while transferring pollen between flowers, helping plants reproduce~\cite{revilla2015}. These opposing effects raise the question of whether supporting bees can compensate for plant loss from caterpillars.
 
-We model these interactions to investigate how plants, caterpillars, and bees respond to possible interventions. We begin with a plant--caterpillar model based on the established Lotka--Volterra predator--prey framework, modified to include logistic plant growth [citation needed]. We then introduce bees through mutualistic terms representing the benefits of pollination to plants and floral resources to bees.
+We model these interactions to investigate how plants, caterpillars, and bees respond to possible interventions. We begin with a plant--caterpillar model based on the established Lotka--Volterra predator--prey framework, modified to include logistic plant growth~\cite{grunert2021}. We then introduce bees through mutualistic terms representing the benefits of pollination to plants and floral resources to bees.
 
 Conservation and management efforts include reducing excessive herbivory and supporting pollinator populations [specific examples and citations needed]. We simulate these approaches to compare their effectiveness in maintaining plant abundance. Through these comparisons, we aim to help conservation practitioners understand which strategies could provide lasting support under the conditions represented by our model. Our goal is to identify approaches that benefit plants while allowing all three populations to coexist.
 
 \subsection{Related Work}
 
-Previous research has combined plant growth, herbivory, and pollination by modeling an insect that feeds on plants as a larva and pollinates as an adult~\cite{RevillaEncinasViso2015}. Our model instead treats bees and caterpillars as separate populations and compares interventions to support plant abundance.
+Previous research has combined plant growth, herbivory, and pollination by modeling an insect that feeds on plants as a larva and pollinates as an adult~\cite{revilla2015}. Our model instead treats bees and caterpillars as separate populations and compares interventions to support plant abundance.
 
 % \begin{figure}[htb]
 % \begin{center} %Put your images in a figure like this
@@ -125,16 +125,14 @@ Here, $P$, $C$, and $B$ represent the plant, caterpillar, and bee populations, r
 This model allows us to investigate how pollination and competition among bees influence the balance between all three populations.
 
 This modle has 5 nonnegative equilibria, listed in the order $(P,C,B)$. For simplicity, we write $P^*=\mu/(\varepsilon a)$ and $B^*=\bigl(\gamma vP^*/(H+P^*)-d\bigr)/q$:
-\[
-\begin{aligned}
-E_0 &= (0,0,0), \\
-E_P &= (K,0,0), \\
-E_{PC} &= \left(P^*,\frac{r}{a}\left(1-\frac{P^*}{K}\right),0\right), \\
-E_{PB} &= \left(K,0,\frac{1}{q}\left(\frac{\gamma vK}{H+K}-d\right)\right), \\
-E_{PCB} &= \left(P^*,\frac{1}{a}\left(1-\frac{P^*}{K}\right)
+\begin{gather*}
+E_0 = (0,0,0), \\
+E_P = (K,0,0), \\
+E_{PC} = \left(P^*,\frac{r}{a}\left(1-\frac{P^*}{K}\right),0\right), \\
+E_{PB} = \left(K,0,\frac{1}{q}\left(\frac{\gamma vK}{H+K}-d\right)\right), \\
+E_{PCB} = \left(P^*,\frac{1}{a}\left(1-\frac{P^*}{K}\right)
 \left(r+\frac{\beta vB^*}{H+P^*}\right),B^*\right).
-\end{aligned}
-\]
+\end{gather*}
 The extinction, plants-only, and plant--caterpillar equilibria correspond to those of Model 1 with no bees. The plant--bee equilibrium $E_{PB}$ and three-population coexistence equilibrium $E_{PCB}$ are new outcomes introduced by adding bees.
 
 The three-population coexistence equilbirium requires
@@ -152,6 +150,9 @@ The first condition is the same carrying-capacity requirement as in Model 1; the
 
 %% Third Section
 \section{Results}
+
+\subsection{Parameter Values}
+Parameter values were estimated from published literature studies and held fixed across all simulations. The parameters $r$, $K$, $a$, $\mu$, $v$, $\beta$, and $d$ were derived directly from sources while parameters $eps$, $H$, $\gamma$, and $q$ have no direct estimate, so we chose values consistent with the literature and allow for a stable positive equilibrium. Using these values, we computed the equalibria of each model.
 
 \subsection{Model 1}
 \leavevmode\par
@@ -254,7 +255,7 @@ This part should all be done before you get to \emph{page 11}.  The bibliography
 \newpage
 %% If using bibtex, leave this uncommented
 \bibliography{refs} %if using bibtex, call your bibtex file refs.bib
-\bibliographystyle{alpha}
+\bibliographystyle{unsrt}
 
 %% If not using bibtex, comment out the previous two lines and uncomment those below
 %\begin{thebibliography}{99}
