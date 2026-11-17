@@ -1,0 +1,11 @@
+The final tasks:
+
+- finish writeup of model 2 results (Ashtyn)
+
+- write a section about the parameters right after results but before the model 1 or model 2 results (Tristen)
+
+- write about AI usage (Ashtyn)
+
+- write about intervention results (Bella)
+
+- include all references (Tristen)

@@ -17,7 +17,7 @@
 
 \begin{document}
 
-\title{Milkweed--Monarch--Bumblebee System}
+\title{Plant--Caterpillar--Polinator Predator-Prey ODE System}
 \author{Isabella Squire, Ashtyn Whipple, Tristen Turlington}
 
 % Change the date to match the date you actually wrote this paper
@@ -26,13 +26,13 @@
 \maketitle % this actually makes the title
 
 \begin{abstract}
-In this paper, we explore ODE-based models for the fluctuations of plant, caterpillar, and bee populations. We begin with a classic plant--caterpillar model (which follows the structure of a predator--prey system) and then extend it by adding a third species. Bees enter the model as mutualists: they gather nectar and pollen from flowers while helping the plants reproduce through pollination. By incorporating carrying capacity, density-dependent competition among bees, and species interaction rates, we analyze the model's equilibria, their stability, and the resulting population dynamics. We then use our model to explore possible human interventions and compare their effectiveness in supporting plant growth.
+In this paper, we explore ODE-based models for the fluctuations of plant, caterpillar, and bee populations. We begin with a classic plant--caterpillar model (which follows the structure of a predator--prey system) and then extend it by adding a third species. Bees enter the model as mutualists. By incorporating carrying capacity, density-dependent competition among bees, and species interaction rates, we analyze the model's equilibria, their stability, and the resulting population dynamics. We then use our model to explore possible human interventions and compare their effectiveness in supporting plant growth.
 \end{abstract}
 
 %% First Section
 \section{Background/Motivation}
 
-Plants support ecosystems by providing food for consumers and releasing oxygen through photosynthesis [citation needed]. Therefore, conserving struggling plant populations is essential and requires interventions that support plants without eliminating other species. Caterpillars consume plant leaves through herbivory, which can reduce plant growth and place additional pressure on vulnerable populations [citation needed]. Bees, in contrast, have a mutualistic relationship with flowering plants: they collect nectar and pollen while transferring pollen between flowers, helping plants reproduce [citation needed]. These opposing effects raise the question of whether supporting bees can compensate for plant losses caused by caterpillars.
+Plants support ecosystems by providing food for consumers and releasing oxygen through photosynthesis [citation needed]. Therefore, conserving struggling plant populations is essential and requires interventions that support plants without eliminating other species. Caterpillars consume plant leaves through herbivory, which can reduce plant growth and place additional pressure on vulnerable populations [citation needed]. Bees, in contrast, have a mutualistic relationship with flowering plants: they collect nectar and pollen while transferring pollen between flowers, helping plants reproduce [citation needed]. These opposing effects raise the question of whether supporting bees can compensate for plant loss from caterpillars.
 
 We model these interactions to investigate how plants, caterpillars, and bees respond to possible interventions. We begin with a plant--caterpillar model based on the established Lotka--Volterra predator--prey framework, modified to include logistic plant growth [citation needed]. We then introduce bees through mutualistic terms representing the benefits of pollination to plants and floral resources to bees.
 
@@ -63,14 +63,14 @@ We start with model 1, which investigates the interactions between flowering pla
 We define the system of ODEs as follows:
 
 \[
-\frac{dp}{dt}=\alpha p\left(1-\frac{p}{K}\right)-apc
+\frac{dp}{dt}=r p\left(1-\frac{p}{K}\right)-apc
 \]
 
 \[
 \frac{dc}{dt}=-\mu c+\varepsilon apc
 \]
 
-Here, $\alpha$ represents the plant growth rate, $K$ is the plant carrying capacity, and $a$ represents the rate at which caterpillars consume plants. The parameter $\mu$ represents the caterpillar death rate, while $\varepsilon$ represents the efficiency with which consumed plants contribute to caterpillar reproduction.
+Here, $r$ represents the plant growth rate, $K$ is the plant carrying capacity, and $a$ represents the rate at which caterpillars consume plants. The parameter $\mu$ represents the caterpillar death rate, while $\varepsilon$ represents the efficiency with which consumed plants contribute to caterpillar reproduction.
 
 This model allows us to evaluate how plant carrying capacity and the interactions between caterpillars and flowering plants affect the survival of both populations.
 
@@ -84,7 +84,7 @@ E_0=(0,0), \qquad E_P=(K,0),
 E_{PC}=
 \left(
 \frac{\mu}{\varepsilon a},
-\frac{\alpha}{a}\left(1-\frac{\mu}{\varepsilon aK}\right)
+\frac{r}{a}\left(1-\frac{\mu}{\varepsilon aK}\right)
 \right).
 \]
 
@@ -191,6 +191,7 @@ For $K=200$, the coexistence equilibrium is stable, with a plant population of 1
 \label{fig:model2-bifurcation}
 \end{figure}
 
+** move part explaining about how now the model supports 43 caterpillars and then also talk about how there are more equilibria
 ** describe here how at K =200 we can see plant abundance is 125 and caterpillar is over 40. Describe why bees cause this change
 \FloatBarrier
 

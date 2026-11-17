@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  17 NOV 2026 09:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  17 NOV 2026 11:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -295,11 +295,11 @@ Package hyperref Info: Link coloring OFF on input line 18.
 Class amsart Warning: Abstract should precede \maketitle in AMS document classes; reported on input line 28.
 
 [1{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-<model 1 population dynamics.png, id=89, 608.5134pt x 338.9463pt>
+<model 1 population dynamics.png, id=89, 615.0177pt x 338.9463pt>
 File: model 1 population dynamics.png Graphic file (type png)
 <use model 1 population dynamics.png>
 Package pdftex.def Info: model 1 population dynamics.png  used on input line 161.
-(pdftex.def)             Requested size: 288.0011pt x 160.41673pt.
+(pdftex.def)             Requested size: 288.0011pt x 158.72552pt.
 <model 1 bifurcation.png, id=91, 1011.78pt x 361.35pt>
 File: model 1 bifurcation.png Graphic file (type png)
 <use model 1 bifurcation.png>
@@ -325,17 +325,17 @@ Package pdftex.def Info: model2_bees.png  used on input line 188.
 <Population Dynamics No Intervention.png, id=116, 614.7768pt x 338.9463pt>
 File: Population Dynamics No Intervention.png Graphic file (type png)
 <use Population Dynamics No Intervention.png>
-Package pdftex.def Info: Population Dynamics No Intervention.png  used on input line 203.
+Package pdftex.def Info: Population Dynamics No Intervention.png  used on input line 204.
 (pdftex.def)             Requested size: 259.20044pt x 142.90987pt.
 <Population Dynamics Bee Support.png, id=117, 614.7768pt x 338.9463pt>
 File: Population Dynamics Bee Support.png Graphic file (type png)
 <use Population Dynamics Bee Support.png>
-Package pdftex.def Info: Population Dynamics Bee Support.png  used on input line 206.
+Package pdftex.def Info: Population Dynamics Bee Support.png  used on input line 207.
 (pdftex.def)             Requested size: 259.20044pt x 142.90987pt.
 <Population Dynamics Caterpillar Reduction.png, id=118, 614.7768pt x 338.9463pt>
 File: Population Dynamics Caterpillar Reduction.png Graphic file (type png)
 <use Population Dynamics Caterpillar Reduction.png>
-Package pdftex.def Info: Population Dynamics Caterpillar Reduction.png  used on input line 209.
+Package pdftex.def Info: Population Dynamics Caterpillar Reduction.png  used on input line 210.
 (pdftex.def)             Requested size: 259.20044pt x 142.90987pt.
  [7
 
@@ -356,7 +356,7 @@ Here is how much of TeX's memory you used:
  1302 hyphenation exceptions out of 8191
  75i,9n,79p,1538b,467s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on final_pdf.pdf (10 pages, 1227458 bytes).
+Output written on final_pdf.pdf (10 pages, 1230796 bytes).
 PDF statistics:
  209 PDF objects out of 1000 (max. 8388607)
  153 compressed objects within 2 object streams
