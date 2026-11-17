@@ -26,18 +26,21 @@
 \maketitle % this actually makes the title
 
 \begin{abstract}
-In this paper, we explore ODE-based models for the fluctuations of plant, caterpillar, and bee populations. We begin with a classic plant--caterpillar model (which follows the structure of a predator--prey system) and then extend it by adding a third species. Bees enter the model as mutualists: they gather nectar and pollen from flowers while helping the plants reproduce through pollination. By incorporating carrying capacity, density-dependent competition among bees, and species interaction rates, we analyze the model's equilibria, their stability, and the resulting population dynamics. Through doing this, we develop a greater understanding of species in our own environment and how to effectively manage the information we have.
+In this paper, we explore ODE-based models for the fluctuations of plant, caterpillar, and bee populations. We begin with a classic plant--caterpillar model (which follows the structure of a predator--prey system) and then extend it by adding a third species. Bees enter the model as mutualists: they gather nectar and pollen from flowers while helping the plants reproduce through pollination. By incorporating carrying capacity, density-dependent competition among bees, and species interaction rates, we analyze the model's equilibria, their stability, and the resulting population dynamics. We then use our model to explore possible human interventions and compare their effectiveness in supporting plant growth.
 \end{abstract}
 
 %% First Section
 \section{Background/Motivation}
 
-Background/Motivation and statement of the problem go here. 
+Plants support ecosystems by providing food for consumers and releasing oxygen through photosynthesis [citation needed]. Therefore, conserving struggling plant populations is essential and requires interventions that support plants without eliminating other species. Caterpillars consume plant leaves through herbivory, which can reduce plant growth and place additional pressure on vulnerable populations [citation needed]. Bees, in contrast, have a mutualistic relationship with flowering plants: they collect nectar and pollen while transferring pollen between flowers, helping plants reproduce [citation needed]. These opposing effects raise the question of whether supporting bees can compensate for plant losses caused by caterpillars.
 
-Give an adequate explanation of the background for the problem that your group is considering. Explain why this problem is important, and what techniques/methods have been previously used (if any) for this problem or similar ones. If you are deriving and analyzing it for a novel phenomenon you don't need to spend much time on this, but if you are modifying an existing model or reviewing something that is known about a particular model for instance, then you should spend much more time reviewing what is known. This review should help the reader know how your results fit in the greater scheme of things and the impacts that your conclusions/results will have on the bigger picture. 
+We model these interactions to investigate how plants, caterpillars, and bees respond to possible interventions. We begin with a plant--caterpillar model based on the established Lotka--Volterra predator--prey framework, modified to include logistic plant growth [citation needed]. We then introduce bees through mutualistic terms representing the benefits of pollination to plants and floral resources to bees.
 
+Conservation and management efforts include reducing excessive herbivory and supporting pollinator populations [specific examples and citations needed]. We simulate these approaches to compare their effectiveness in maintaining plant abundance. Through these comparisons, we aim to help conservation practitioners understand which strategies could provide lasting support under the conditions represented by our model. Our goal is to identify approaches that benefit plants while allowing all three populations to coexist.
 
-Also reference articles and sources \cite{Vandermeersch} that are relevant or that you used when learning and/or thinking about your project.
+\subsection{Related Work}
+
+Previous research has combined plant growth, herbivory, and pollination by modeling an insect that feeds on plants as a larva and pollinates as an adult~\cite{RevillaEncinasViso2015}. Our model instead treats bees and caterpillars as separate populations and compares interventions to support plant abundance.
 
 % \begin{figure}[htb]
 % \begin{center} %Put your images in a figure like this
@@ -52,6 +55,8 @@ Also reference articles and sources \cite{Vandermeersch} that are relevant or th
 
 %% Second Section 
 \section{Modeling}
+
+\subsection{Model 1 -- Plants and Caterpillars}
 
 We start with model 1, which investigates the interactions between flowering plants and caterpillars. Let (P) represent the plant population and (C) represent the caterpillar population at a given time. Plants grow naturally but are limited by the environment's carrying capacity, while caterpillars depend on plants as their food source. As the caterpillar population increases, more plants are consumed, which reduces plant growth. Caterpillars also reproduce based on the amount of available food.
 
@@ -69,22 +74,17 @@ Here, $\alpha$ represents the plant growth rate, $K$ is the plant carrying capac
 
 This model allows us to evaluate how plant carrying capacity and the interactions between caterpillars and flowering plants affect the survival of both populations.
 
-\begin{figure}[htb]
-\centering
-\includegraphics[width=0.8\textwidth]{model 1 bifurcation.png}
-\caption{Bifurcation diagram for Model 1 showing the change in equilibrium populations as carrying capacity increases.}
-\label{fig:model1}
-\end{figure}
 
-\begin{figure}[htb]
-\centering
-\includegraphics[width=0.8\textwidth]{model 1 population dynamics.png}
-\caption{Plot for Model 1 showing how the populations of the caterpillars and the plants change with each other.}
-\end{figure}
+
+**oof, after looking i actually think 4 caterpillars is realistic in some circumstances haha but we can fact check. So instead maybe here we can say what the three equilbiria are in terms of the parameter symbols and describe how we know in nature plant only, coexistnce, and extinction are all realsitc equilbria so it is good that model 1 can generally repoduce those results, but then we will keep the next paragraph that says we know there are other factors we can add to make it more realistic - the bees. Also maybe add the condition where teh coexistence equilbrium is stable since that is the equilibrium we are interested in**
 
 Model 1 describes the interactions between flowering plants and caterpillars but does not account for the role of bees in pollination. Since bees contribute to plant reproduction and growth, their presence may also indirectly affect caterpillar populations by changing food availability. Therefore, we extend the model by adding bees to investigate how pollination influences plant growth and the balance between all three populations.
 
+\subsection{Model 2 -- Plants, Caterpillars, and Bees}
+
 Let $B$ represent the bee population. Bees visit flowers to collect nectar and pollen, which supports their population growth while also helping plants reproduce. We assume that flower visitation increases with plant abundance but eventually saturates, since bees cannot visit an unlimited number of flowers. Unlike caterpillars, which reduce plant abundance through feeding, bees contribute positively to plant growth through pollination.
+
+Plant growth remains limited by carrying capacity, and plants can also grow without the modeled bees. Bee populations experience natural mortality and density-dependent competition. Bees and caterpillars influence one another indirectly through their effects on the plant population.
 
 We define the expanded system of ODEs as follows:
 
@@ -106,9 +106,27 @@ Here, $P$, $C$, and $B$ represent the plant, caterpillar, and bee populations, r
 
 This model allows us to investigate how pollination and competition among bees influence the balance between all three populations.
 
-This new model was very successful!. We were able to ... 
+This modle has 5 nonnegative equilibria, listed in the order $(P,C,B)$. For simplicity, we write $P^*=\mu/(\varepsilon a)$ and $B^*=\bigl(\gamma vP^*/(H+P^*)-d\bigr)/q$:
+\[
+\begin{aligned}
+E_0 &= (0,0,0), \\
+E_P &= (K,0,0), \\
+E_{PC} &= \left(P^*,\frac{r}{a}\left(1-\frac{P^*}{K}\right),0\right), \\
+E_{PB} &= \left(K,0,\frac{1}{q}\left(\frac{\gamma vK}{H+K}-d\right)\right), \\
+E_{PCB} &= \left(P^*,\frac{1}{a}\left(1-\frac{P^*}{K}\right)
+\left(r+\frac{\beta vB^*}{H+P^*}\right),B^*\right).
+\end{aligned}
+\]
+The extinction, plants-only, and plant--caterpillar equilibria correspond to those of Model 1 with no bees. The plant--bee equilibrium $E_{PB}$ and three-population coexistence equilibrium $E_{PCB}$ are new outcomes introduced by adding bees.
 
-add figures
+The three-population coexistence equilbirium requires
+\[
+K>\frac{\mu}{\varepsilon a}
+\qquad\text{and}\qquad
+\frac{\gamma vP^*}{H+P^*}>d.
+\]
+The first condition is the same carrying-capacity requirement as in Model 1; the additional condition requires sufficient plant resources for bee reproduction to exceed natural mortality. Unlike Model 1, however, biologically feasible coexistence is not automatically stable for every parameter choice in Model 2. For our chosen parameters, coexistence is stable throughout the sampled range $125<K\leq200$, matching Model 1's stable coexistence behavior over this range.
+
 
 
 
@@ -117,7 +135,68 @@ add figures
 %% Third Section
 \section{Results}
 
-Clearly and succinctly state and describe the conclusions that you can draw from the model you have achieved (or the many failed attempts), and your numerical simulations.  Does your model(s) perform well quantitatively or qualitatively?
+\subsection{Model 1}
+\leavevmode\par
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=0.8\textwidth]{model 1 population dynamics.png}
+\caption{Plot for Model 1 showing how the populations of the caterpillars and the plants change with each other.}
+\end{figure}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=0.8\textwidth]{model 1 bifurcation.png}
+\caption{Bifurcation diagram for Model 1 showing the change in equilibrium populations as carrying capacity increases.}
+\label{fig:model1}
+\end{figure}
+
+** describe a little here what is goin on in the bifurcation figures. time course one is probably self explanatory?
+** maybe note that when K = 200, the coexistnce equilbirium is stable and the plant abundance is 125, and for caterpillars it is around 4. This is an intersting result because in model 2, the caterpillar level increases to be 40 ish while plants remain at 125
+
+
+\FloatBarrier
+
+\subsection{Model 2}
+\leavevmode\par
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=0.48\textwidth]{model2_plants.png}
+\hfill
+\includegraphics[width=0.48\textwidth]{model2_caterpillars.png}
+
+\medskip
+\includegraphics[width=0.48\textwidth]{model2_bees.png}
+
+\caption{Bifurcation diagrams for Model 2 showing equilibrium plant (top left), caterpillar (top right), and bee (bottom) populations as plant carrying capacity varies. Solid lines indicate stable equilibria, and dashed lines indicate unstable equilibria. Small display offsets separate overlapping branches.}
+\label{fig:model2-bifurcation}
+\end{figure}
+
+** describe here how at K =200 we can see plant abundance is 125 and caterpillar is over 40. Describe why bees cause this change
+\FloatBarrier
+
+\clearpage
+\subsection{Interventions}
+\leavevmode\par
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=0.72\textwidth]{Population Dynamics No Intervention.png}
+
+\medskip
+\includegraphics[width=0.72\textwidth]{Population Dynamics Bee Support.png}
+
+\medskip
+\includegraphics[width=0.72\textwidth]{Population Dynamics Caterpillar Reduction.png}
+
+\caption{Model 2 population dynamics at $K=200$ with no intervention (top), bee support through a 20\% decrease in bee mortality (middle), and caterpillar reduction through a 20\% increase in caterpillar mortality (bottom). All simulations use the same initial populations.}
+\label{fig:interventions}
+\end{figure}
+
+**Describe what the interventions represent in real life. Describe what supporting bees does and how it doesnt support long term plant growth. Talk about how only caterpillar reduction does. they dont need to be completely eliminated, just reduced.
+
+\FloatBarrier
 
 %%Fourth Section
 \section{Analysis/Conclusions}
