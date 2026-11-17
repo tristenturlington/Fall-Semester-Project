@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex final_pdf"] 1794931317.85383 "final_pdf.aux" "final_pdf.bbl" "final_pdf" 1794931448.75432 0
+["bibtex final_pdf"] 1794931317.85383 "final_pdf.aux" "final_pdf.bbl" "final_pdf" 1794933284.01733 0
   "./refs.bib" 1794929636.92595 417 f5cfa939aa2d22825b7861833631efcf ""
   "/usr/local/texlive/2026/texmf-dist/bibtex/bst/base/alpha.bst" 1292289607 23907 a5f93555796fb564b924339521f10a7c ""
-  "final_pdf.aux" 1794931448.57064 4363 16e08b9fff7d9411cbc5d4cec0f2e2fe "pdflatex"
+  "final_pdf.aux" 1794933283.83583 4363 16e08b9fff7d9411cbc5d4cec0f2e2fe "pdflatex"
   (generated)
   "final_pdf.bbl"
   "final_pdf.blg"
   (rewritten before read)
-["pdflatex"] 1794931446.87004 "/Users/ashtynwhipple/School/Fall-Semester-Project/436 Vol 4/final_pdf/final_pdf.tex" "final_pdf.pdf" "final_pdf" 1794931448.75443 0
-  "/Users/ashtynwhipple/School/Fall-Semester-Project/436 Vol 4/final_pdf/final_pdf.tex" 1794931446.66609 17835 0c25bdf95fe610b76f6de3be58d49c54 ""
+["pdflatex"] 1794933282.13735 "/Users/ashtynwhipple/School/Fall-Semester-Project/436 Vol 4/final_pdf/final_pdf.tex" "final_pdf.pdf" "final_pdf" 1794933284.01744 0
+  "/Users/ashtynwhipple/School/Fall-Semester-Project/436 Vol 4/final_pdf/final_pdf.tex" 1794933281.91538 18424 4adcaecdb0bac086f653393829b8adfb ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -103,10 +103,10 @@
   "Population Dynamics Bee Support.png" 1794929636.90801 84441 57a49dafcba152c63ce7f6925d997b7a ""
   "Population Dynamics Caterpillar Reduction.png" 1794929636.90894 95781 b2688bd2a159c6b2fcbe7cf6eb11b381 ""
   "Population Dynamics No Intervention.png" 1794929636.91022 74749 a3abd75f05f8ffd59f2dfe6d804747d7 ""
-  "final_pdf.aux" 1794931448.57064 4363 16e08b9fff7d9411cbc5d4cec0f2e2fe "pdflatex"
+  "final_pdf.aux" 1794933283.83583 4363 16e08b9fff7d9411cbc5d4cec0f2e2fe "pdflatex"
   "final_pdf.bbl" 1794931317.93321 372 12866704977a76a99bc72e7b208fa0a9 "bibtex final_pdf"
-  "final_pdf.out" 1794931448.57106 2514 de6376afb1485aa9728553e4e3cc095b "pdflatex"
-  "final_pdf.tex" 1794931446.66609 17835 0c25bdf95fe610b76f6de3be58d49c54 ""
+  "final_pdf.out" 1794933283.83626 2514 de6376afb1485aa9728553e4e3cc095b "pdflatex"
+  "final_pdf.tex" 1794933281.91538 18424 4adcaecdb0bac086f653393829b8adfb ""
   "model 1 bifurcation.png" 1794929636.92193 242257 7cb1fabbc86f5f8521feda0b70b56779 ""
   "model 1 population dynamics.png" 1794887140.6638 28686 91afbdf04b41d4222c8f1efa26bf8d83 ""
   "model2_bees.png" 1794929636.92364 168963 886f90fe01c934b8b1261e65de6238a6 ""
