@@ -53,7 +53,65 @@ Also reference articles and sources \cite{Vandermeersch} that are relevant or th
 %% Second Section 
 \section{Modeling}
 
- The primary aspect of the project is the modeling of the chosen phenomenon. If your group's repeated attempts resulted in abject failure, or your group succeeded, detail them in this section. Be sure to account for the various attempted models and why they were not appropriate. Include numerical simulations for each attempted model.  Reference figures and plots, like Figure~\ref{fig:MeanSquaredError}.
+We start with model 1, which investigates the interactions between flowering plants and caterpillars. Let (P) represent the plant population and (C) represent the caterpillar population at a given time. Plants grow naturally but are limited by the environment's carrying capacity, while caterpillars depend on plants as their food source. As the caterpillar population increases, more plants are consumed, which reduces plant growth. Caterpillars also reproduce based on the amount of available food.
+
+We define the system of ODEs as follows:
+
+\[
+\frac{dp}{dt}=\alpha p\left(1-\frac{p}{K}\right)-apc
+\]
+
+\[
+\frac{dc}{dt}=-\mu c+\varepsilon apc
+\]
+
+Here, $\alpha$ represents the plant growth rate, $K$ is the plant carrying capacity, and $a$ represents the rate at which caterpillars consume plants. The parameter $\mu$ represents the caterpillar death rate, while $\varepsilon$ represents the efficiency with which consumed plants contribute to caterpillar reproduction.
+
+This model allows us to evaluate how plant carrying capacity and the interactions between caterpillars and flowering plants affect the survival of both populations.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.8\textwidth]{model 1 bifurcation.png}
+\caption{Bifurcation diagram for Model 1 showing the change in equilibrium populations as carrying capacity increases.}
+\label{fig:model1}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.8\textwidth]{model 1 population dynamics.png}
+\caption{Plot for Model 1 showing how the populations of the caterpillars and the plants change with each other.}
+\end{figure}
+
+Model 1 describes the interactions between flowering plants and caterpillars but does not account for the role of bees in pollination. Since bees contribute to plant reproduction and growth, their presence may also indirectly affect caterpillar populations by changing food availability. Therefore, we extend the model by adding bees to investigate how pollination influences plant growth and the balance between all three populations.
+
+Let $B$ represent the bee population. Bees visit flowers to collect nectar and pollen, which supports their population growth while also helping plants reproduce. We assume that flower visitation increases with plant abundance but eventually saturates, since bees cannot visit an unlimited number of flowers. Unlike caterpillars, which reduce plant abundance through feeding, bees contribute positively to plant growth through pollination.
+
+We define the expanded system of ODEs as follows:
+
+\[
+\frac{dP}{dt}
+= rP\left(1-\frac{P}{K}\right)-aPC
++\beta\frac{vPB}{H+P}\left(1-\frac{P}{K}\right)
+\]
+
+\[
+\frac{dC}{dt}=\varepsilon aPC-\mu C
+\]
+
+\[
+\frac{dB}{dt}=\gamma\frac{vPB}{H+P}-dB-qB^2
+\]
+
+Here, $P$, $C$, and $B$ represent the plant, caterpillar, and bee populations, respectively. The parameters $v$ and $H$ describe the maximum flower visitation rate and the plant abundance at which visitation reaches half its maximum. The parameter $\beta$ measures the contribution of pollination to plant growth, while $\gamma$ represents the contribution of flower visits to bee population growth. Finally, $d$ represents the natural bee mortality rate, and $q$ accounts for density-dependent competition among bees.
+
+This model allows us to investigate how pollination and competition among bees influence the balance between all three populations.
+
+This new model was very successful!. We were able to ... 
+
+add figures
+
+
+
 
 
 %% Third Section
