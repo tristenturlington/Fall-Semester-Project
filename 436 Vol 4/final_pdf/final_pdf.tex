@@ -74,9 +74,27 @@ Here, $\alpha$ represents the plant growth rate, $K$ is the plant carrying capac
 
 This model allows us to evaluate how plant carrying capacity and the interactions between caterpillars and flowering plants affect the survival of both populations.
 
+The model has three possible equilibria, representing extinction of both populations, plants surviving without caterpillars, and coexistence of both species. These equilibria are:
 
+\[
+E_0=(0,0), \qquad E_P=(K,0),
+\]
 
-**oof, after looking i actually think 4 caterpillars is realistic in some circumstances haha but we can fact check. So instead maybe here we can say what the three equilbiria are in terms of the parameter symbols and describe how we know in nature plant only, coexistnce, and extinction are all realsitc equilbria so it is good that model 1 can generally repoduce those results, but then we will keep the next paragraph that says we know there are other factors we can add to make it more realistic - the bees. Also maybe add the condition where teh coexistence equilbrium is stable since that is the equilibrium we are interested in**
+\[
+E_{PC}=
+\left(
+\frac{\mu}{\varepsilon a},
+\frac{\alpha}{a}\left(1-\frac{\mu}{\varepsilon aK}\right)
+\right).
+\]
+
+The coexistence equilibrium is biologically feasible when
+
+\[
+K>\frac{\mu}{\varepsilon a}.
+\]
+
+This condition means that the plant carrying capacity must be sufficiently large to support both populations. The extinction equilibrium is a saddle point, while the plant-only equilibrium is stable below this threshold. Above the threshold, the coexistence equilibrium is stable. These results show that the model can represent several realistic ecological outcomes, including extinction, plant survival without herbivores, and coexistence between plants and caterpillars.
 
 Model 1 describes the interactions between flowering plants and caterpillars but does not account for the role of bees in pollination. Since bees contribute to plant reproduction and growth, their presence may also indirectly affect caterpillar populations by changing food availability. Therefore, we extend the model by adding bees to investigate how pollination influences plant growth and the balance between all three populations.
 
@@ -201,8 +219,21 @@ The first condition is the same carrying-capacity requirement as in Model 1; the
 %%Fourth Section
 \section{Analysis/Conclusions}
 
-Discuss the appropriateness of the techniques/methods you employed in modeling. Did your group appropriately model the chosen phenomenon? If not, what different steps could you have taken if you had more time? What did you learn about the techniques/method that were used in the group project? If your model was successful, what additional insight/conclusions could you obtain from it? For instance, if you had a successfully modified SIR model, how might it affect different government policy? If you had a successful model for the spread of inaccurate information on social media, how might it be implemented to help reduce the spread of inaccurate information?
+\subsection{Equilibria and Population Dynamics}
 
+Our models demonstrated how interactions between plants, caterpillars, and bees influence the long-term behavior of an ecosystem. Model 1 successfully represented three possible outcomes: extinction of both populations, plants surviving without caterpillars, and coexistence between the two species. Adding bees in Model 2 introduced additional equilibria, including plant-bee coexistence and coexistence of all three species. This allowed us to explore a more complete set of possible population dynamics.
+
+One interesting result was that adding bees allowed the ecosystem to support a much larger caterpillar population. At a carrying capacity of $K=200$, Model 1 predicted an equilibrium plant population of 125 and a caterpillar population of approximately 4. In Model 2, the plant population remained at 125, but the caterpillar population increased to over 40. This suggests that pollination can increase the resources available to caterpillars, allowing more caterpillars to survive without necessarily increasing the long-term equilibrium plant population.
+
+\subsection{Interventions}
+
+We also investigated two possible interventions: supporting bee populations by decreasing their mortality rate and reducing caterpillar populations by increasing their mortality rate. Our simulations showed that supporting bees alone did not produce a lasting improvement in plant abundance. Although bees contribute positively to plant growth through pollination, their benefits were not sufficient to overcome the effects of caterpillar consumption. In contrast, reducing caterpillar populations improved plant abundance over the long term. This suggests that managing herbivore populations may be more effective than relying on pollinator support alone when the primary goal is maintaining plant populations. Caterpillars do not need to be eliminated entirely; reducing their population can be sufficient to improve plant survival.
+
+\subsection{Limitations and Future Work}
+
+Although our models captured several important ecological relationships, they simplified a much more complex ecosystem. We assumed constant growth, mortality, and interaction rates and did not account for seasonal changes, environmental conditions, or other species that could influence population dynamics. Additionally, our parameters were chosen to explore the behavior of the system rather than calibrated using actual population data. With more time, we could incorporate real ecological data, investigate seasonal effects, and explore additional interventions.
+
+Overall, this project helped us understand how systems of ordinary differential equations can be used to represent biological interactions and predict long-term population behavior. We also learned how equilibrium and stability analysis can help identify the conditions under which species can coexist. While our models cannot capture every aspect of a real ecosystem, they provide useful insight into how plants, caterpillars, and bees depend on one another and how different strategies of managing the ecosystem can influence their populations.
 
 \section{AI Disclosure}
 

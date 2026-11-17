@@ -152,17 +152,51 @@ INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam1
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT ./model 1 bifurcation.png
-INPUT ./model 1 bifurcation.png
-INPUT ./model 1 bifurcation.png
-INPUT ./model 1 bifurcation.png
-INPUT ./model 1 bifurcation.png
 INPUT ./model 1 population dynamics.png
 INPUT ./model 1 population dynamics.png
 INPUT ./model 1 population dynamics.png
 INPUT ./model 1 population dynamics.png
 INPUT ./model 1 population dynamics.png
+INPUT ./model 1 bifurcation.png
+INPUT ./model 1 bifurcation.png
+INPUT ./model 1 bifurcation.png
+INPUT ./model 1 bifurcation.png
+INPUT ./model 1 bifurcation.png
+INPUT ./model2_plants.png
+INPUT ./model2_plants.png
+INPUT ./model2_plants.png
+INPUT ./model2_plants.png
+INPUT ./model2_plants.png
+INPUT ./model2_caterpillars.png
+INPUT ./model2_caterpillars.png
+INPUT ./model2_caterpillars.png
+INPUT ./model2_caterpillars.png
+INPUT ./model2_caterpillars.png
+INPUT ./model2_bees.png
+INPUT ./model2_bees.png
+INPUT ./model2_bees.png
+INPUT ./model2_bees.png
+INPUT ./model2_bees.png
+INPUT ./Population Dynamics No Intervention.png
+INPUT ./Population Dynamics No Intervention.png
+INPUT ./Population Dynamics No Intervention.png
+INPUT ./Population Dynamics No Intervention.png
+INPUT ./Population Dynamics No Intervention.png
+INPUT ./Population Dynamics Bee Support.png
+INPUT ./Population Dynamics Bee Support.png
+INPUT ./Population Dynamics Bee Support.png
+INPUT ./Population Dynamics Bee Support.png
+INPUT ./Population Dynamics Bee Support.png
+INPUT ./Population Dynamics Caterpillar Reduction.png
+INPUT ./Population Dynamics Caterpillar Reduction.png
+INPUT ./Population Dynamics Caterpillar Reduction.png
+INPUT ./Population Dynamics Caterpillar Reduction.png
+INPUT ./Population Dynamics Caterpillar Reduction.png
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT ./final_pdf.bbl
+INPUT ./final_pdf.bbl
+INPUT final_pdf.bbl
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmtt9.tfm
 INPUT final_pdf.aux
 INPUT ./final_pdf.out
 INPUT ./final_pdf.out
@@ -170,9 +204,12 @@ INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.p
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb

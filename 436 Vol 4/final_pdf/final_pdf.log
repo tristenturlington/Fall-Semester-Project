@@ -1,31 +1,32 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.11)  17 NOV 2026 00:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  17 NOV 2026 09:04
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/kybel/Coding/Fall-Semester-Project/436 Vol 4/final_pdf/final_pdf.tex"
-(c:/Users/kybel/Coding/Fall-Semester-Project/436 Vol 4/final_pdf/final_pdf.tex
+**"/Users/ashtynwhipple/School/Fall-Semester-Project/436 Vol 4/final_pdf/final_pdf.tex"
+(/Users/ashtynwhipple/School/Fall-Semester-Project/436 Vol 4/final_pdf/final_pdf.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
-(C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsart.cls
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amscls/amsart.cls
 Document Class: amsart 2020/05/29 v2.20.6
 \linespacing=\dimen148
 \normalparindent=\dimen149
 \normaltopskip=\skip49
-(C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip50
 
 For additional information on amsmath, use the `?' option.
-(C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
- (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
 \ex@=\dimen150
-)) (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen151
-) (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count275
@@ -77,9 +78,9 @@ LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
 )
 LaTeX Font Info:    Trying to load font information for U+msa on input line 397.
- (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-) (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
@@ -112,78 +113,78 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 \dth@everypar=\toks27
 )
 LaTeX Info: Redefining \markboth on input line 6.
- (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
- (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks28
-) (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
- (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-) (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
- (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen160
 \Gin@req@width=\dimen161
-) (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-) (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/placeins\placeins.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
-) (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
- (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
-) (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-) (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
- (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-) (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
- (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)) (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
- (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-) (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
- (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count295
-) (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count296
-) (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
 \@linkdim=\dimen162
 \Hy@linkcounter=\count297
 \Hy@pagecounter=\count298
- (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count299
- (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -196,15 +197,15 @@ Package hyperref Info: Backreferencing OFF on input line 4221.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4468.
 \c@Hy@tempcnt=\count300
- (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4807.
 \XeTeXLinkMargin=\dimen163
- (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
- (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count301
@@ -222,22 +223,22 @@ Package hyperref Info: PDF/A mode OFF on input line 6114.
 \c@Hfootnote=\count304
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
- (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2026-01-29 v7.01p Hyperref driver for pdfTeX
 \Fld@listcount=\count305
 \c@bookmark@seq@number=\count306
- (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
- (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
 )
 \Hy@SectionHShift=\skip59
-) (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count307
-) (final_pdf.aux)
+) (./final_pdf.aux)
 \openout1 = `final_pdf.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -259,13 +260,13 @@ LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
- (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
- (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+) (/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count308
 \scratchdimen=\dimen166
@@ -278,14 +279,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \MPnumerator=\count312
 \makeMPintoPDFobject=\count313
 \everyMPtoPDFconversion=\toks30
-) (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (C:\Users\kybel\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring OFF on input line 18.
- (final_pdf.out) (final_pdf.out)
+ (./final_pdf.out) (./final_pdf.out)
 \@outlinefile=\write3
 \openout3 = `final_pdf.out'.
 
@@ -293,71 +294,72 @@ Package hyperref Info: Link coloring OFF on input line 18.
 
 Class amsart Warning: Abstract should precede \maketitle in AMS document classes; reported on input line 28.
 
-[1{C:/Users/kybel/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] [3]
-<model 1 population dynamics.png, id=77, 608.5134pt x 338.9463pt>
+[1{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+<model 1 population dynamics.png, id=89, 608.5134pt x 338.9463pt>
 File: model 1 population dynamics.png Graphic file (type png)
 <use model 1 population dynamics.png>
-Package pdftex.def Info: model 1 population dynamics.png  used on input line 143.
+Package pdftex.def Info: model 1 population dynamics.png  used on input line 161.
 (pdftex.def)             Requested size: 288.0011pt x 160.41673pt.
-<model 1 bifurcation.png, id=79, 1011.78pt x 361.35pt>
+<model 1 bifurcation.png, id=91, 1011.78pt x 361.35pt>
 File: model 1 bifurcation.png Graphic file (type png)
 <use model 1 bifurcation.png>
-Package pdftex.def Info: model 1 bifurcation.png  used on input line 149.
+Package pdftex.def Info: model 1 bifurcation.png  used on input line 167.
 (pdftex.def)             Requested size: 288.0011pt x 102.859pt.
- [4 <./model 1 population dynamics.png>]
-<model2_plants.png, id=86, 640.0713pt x 425.1885pt>
+ [4]
+<model2_plants.png, id=97, 640.0713pt x 425.1885pt>
 File: model2_plants.png Graphic file (type png)
 <use model2_plants.png>
-Package pdftex.def Info: model2_plants.png  used on input line 165.
+Package pdftex.def Info: model2_plants.png  used on input line 183.
 (pdftex.def)             Requested size: 172.79846pt x 114.78296pt.
-<model2_caterpillars.png, id=87, 639.8304pt x 425.1885pt>
+<model2_caterpillars.png, id=98, 639.8304pt x 425.1885pt>
 File: model2_caterpillars.png Graphic file (type png)
 <use model2_caterpillars.png>
-Package pdftex.def Info: model2_caterpillars.png  used on input line 167.
+Package pdftex.def Info: model2_caterpillars.png  used on input line 185.
 (pdftex.def)             Requested size: 172.79846pt x 114.82837pt.
-<model2_bees.png, id=88, 640.0713pt x 425.1885pt>
+<model2_bees.png, id=99, 640.0713pt x 425.1885pt>
 File: model2_bees.png Graphic file (type png)
 <use model2_bees.png>
-Package pdftex.def Info: model2_bees.png  used on input line 170.
+Package pdftex.def Info: model2_bees.png  used on input line 188.
 (pdftex.def)             Requested size: 172.79846pt x 114.78296pt.
- [5 <./model 1 bifurcation.png> <./model2_plants.png> <./model2_caterpillars.png> <./model2_bees.png>]
-<Population Dynamics No Intervention.png, id=99, 614.7768pt x 338.9463pt>
+ [5 <./model 1 population dynamics.png> <./model 1 bifurcation.png>] [6 <./model2_plants.png> <./model2_caterpillars.png> <./model2_bees.png>]
+<Population Dynamics No Intervention.png, id=116, 614.7768pt x 338.9463pt>
 File: Population Dynamics No Intervention.png Graphic file (type png)
 <use Population Dynamics No Intervention.png>
-Package pdftex.def Info: Population Dynamics No Intervention.png  used on input line 185.
+Package pdftex.def Info: Population Dynamics No Intervention.png  used on input line 203.
 (pdftex.def)             Requested size: 259.20044pt x 142.90987pt.
-<Population Dynamics Bee Support.png, id=100, 614.7768pt x 338.9463pt>
+<Population Dynamics Bee Support.png, id=117, 614.7768pt x 338.9463pt>
 File: Population Dynamics Bee Support.png Graphic file (type png)
 <use Population Dynamics Bee Support.png>
-Package pdftex.def Info: Population Dynamics Bee Support.png  used on input line 188.
+Package pdftex.def Info: Population Dynamics Bee Support.png  used on input line 206.
 (pdftex.def)             Requested size: 259.20044pt x 142.90987pt.
-<Population Dynamics Caterpillar Reduction.png, id=101, 614.7768pt x 338.9463pt>
+<Population Dynamics Caterpillar Reduction.png, id=118, 614.7768pt x 338.9463pt>
 File: Population Dynamics Caterpillar Reduction.png Graphic file (type png)
 <use Population Dynamics Caterpillar Reduction.png>
-Package pdftex.def Info: Population Dynamics Caterpillar Reduction.png  used on input line 191.
+Package pdftex.def Info: Population Dynamics Caterpillar Reduction.png  used on input line 209.
 (pdftex.def)             Requested size: 259.20044pt x 142.90987pt.
- [6
+ [7
 
- <./Population Dynamics No Intervention.png> <./Population Dynamics Bee Support.png> <./Population Dynamics Caterpillar Reduction.png>] [7] (final_pdf.bbl) [8] (final_pdf.aux)
+ <./Population Dynamics No Intervention.png> <./Population Dynamics Bee Support.png> <./Population Dynamics Caterpillar Reduction.png>] [8] [9] (./final_pdf.bbl) [10] (./final_pdf.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `final_pdf.out' has not changed.
-(rerunfilecheck)             Checksum: 17825864A45025EBF3F71BDA77FF945C;1868.
+(rerunfilecheck)             Checksum: DE6376AFB1485AA9728553E4E3CC095B;2514.
  ) 
 Here is how much of TeX's memory you used:
- 10218 strings out of 467867
- 155096 string characters out of 5418334
- 569718 words of memory out of 5000000
- 38805 multiletter control sequences out of 15000+600000
+ 10223 strings out of 467525
+ 153593 string characters out of 5418982
+ 569267 words of memory out of 5000000
+ 38832 multiletter control sequences out of 15000+600000
  636327 words of font info for 73 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 75i,9n,79p,1532b,463s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on final_pdf.pdf (8 pages, 1239248 bytes).
+ 75i,9n,79p,1538b,467s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on final_pdf.pdf (10 pages, 1226309 bytes).
 PDF statistics:
- 185 PDF objects out of 1000 (max. 8388607)
- 26 named destinations out of 1000 (max. 500000)
- 137 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 209 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
+ 31 named destinations out of 1000 (max. 500000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
 
