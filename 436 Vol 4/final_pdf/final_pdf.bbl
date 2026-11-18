@@ -1,9 +1,23 @@
-\begin{thebibliography}{REV15}
+\begin{thebibliography}{1}
 
-\bibitem[REV15]{RevillaEncinasViso2015}
+\bibitem{johnson2016}
+Matthew~P. Johnson.
+\newblock Photosynthesis.
+\newblock {\em Essays in Biochemistry}, 60(3):255--273, October 2016.
+
+\bibitem{grant2022}
+Tyler~J. Grant, Kelsey~E. Fisher, Niranjana Krishnan, Alexander~N. Mullins, Richard~L. Hellmich, Thomas~W. Sappington, James~S. Adelman, Joel~R. Coats, Robert~G. Hartzler, John~M. Pleasants, et~al.
+\newblock Monarch butterfly ecology, behavior, and vulnerabilities in {North Central United States} agricultural landscapes.
+\newblock {\em BioScience}, 72(12):1176--1203, December 2022.
+
+\bibitem{revilla2015}
 Tom{\'a}s~A. Revilla and Francisco Encinas-Viso.
 \newblock Dynamical transitions in a pollination--herbivory interaction: A conflict between mutualism and antagonism.
-\newblock {\em PLOS ONE}, 10(2):e0117964, 2015.
-\newblock \url{https://doi.org/10.1371/journal.pone.0117964}.
+\newblock {\em PLoS ONE}, 10(2):e0117964, February 2015.
+
+\bibitem{grunert2021}
+Katrin Grunert, Helge Holden, Espen~R. Jakobsen, and Nils~Chr. Stenseth.
+\newblock Evolutionarily stable strategies in stable and periodically fluctuating populations: The {Rosenzweig--MacArthur} predator--prey model.
+\newblock {\em Proceedings of the National Academy of Sciences}, 118(4):e2017463118, January 2021.
 
 \end{thebibliography}
