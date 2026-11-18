@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.11)  18 NOV 2026 09:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  18 NOV 2026 09:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -293,61 +293,45 @@ Package hyperref Info: Link coloring OFF on input line 18.
 
 Class amsart Warning: Abstract should precede \maketitle in AMS document classes; reported on input line 28.
 
-
-LaTeX Warning: Citation `johnson2016' on page 1 undefined on input line 35.
-
-
-LaTeX Warning: Citation `grant2022' on page 1 undefined on input line 35.
-
-
-LaTeX Warning: Citation `revilla2015' on page 1 undefined on input line 35.
-
-
-LaTeX Warning: Citation `grunert2021' on page 1 undefined on input line 37.
-
-[1{C:/Users/kybel/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-
-LaTeX Warning: Citation `revilla2015' on page 2 undefined on input line 43.
-
-[2] [3]
-<model 1 population dynamics.png, id=90, 615.0177pt x 338.9463pt>
+[1{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+<model 1 population dynamics.png, id=100, 615.0177pt x 338.9463pt>
 File: model 1 population dynamics.png Graphic file (type png)
 <use model 1 population dynamics.png>
 Package pdftex.def Info: model 1 population dynamics.png  used on input line 162.
 (pdftex.def)             Requested size: 288.0011pt x 158.72552pt.
-<model 1 bifurcation.png, id=92, 1011.78pt x 361.35pt>
+<model 1 bifurcation.png, id=102, 1011.78pt x 361.35pt>
 File: model 1 bifurcation.png Graphic file (type png)
 <use model 1 bifurcation.png>
 Package pdftex.def Info: model 1 bifurcation.png  used on input line 168.
 (pdftex.def)             Requested size: 288.0011pt x 102.859pt.
  [4]
-<model2_plants.png, id=98, 640.0713pt x 425.1885pt>
+<model2_plants.png, id=108, 640.0713pt x 425.1885pt>
 File: model2_plants.png Graphic file (type png)
 <use model2_plants.png>
 Package pdftex.def Info: model2_plants.png  used on input line 184.
 (pdftex.def)             Requested size: 172.79846pt x 114.78296pt.
-<model2_caterpillars.png, id=99, 639.8304pt x 425.1885pt>
+<model2_caterpillars.png, id=109, 639.8304pt x 425.1885pt>
 File: model2_caterpillars.png Graphic file (type png)
 <use model2_caterpillars.png>
 Package pdftex.def Info: model2_caterpillars.png  used on input line 186.
 (pdftex.def)             Requested size: 172.79846pt x 114.82837pt.
-<model2_bees.png, id=100, 640.0713pt x 425.1885pt>
+<model2_bees.png, id=110, 640.0713pt x 425.1885pt>
 File: model2_bees.png Graphic file (type png)
 <use model2_bees.png>
 Package pdftex.def Info: model2_bees.png  used on input line 189.
 (pdftex.def)             Requested size: 172.79846pt x 114.78296pt.
  [5 <./model 1 population dynamics.png> <./model 1 bifurcation.png>] [6 <./model2_plants.png> <./model2_caterpillars.png> <./model2_bees.png>]
-<Population Dynamics No Intervention.png, id=117, 614.7768pt x 338.9463pt>
+<Population Dynamics No Intervention.png, id=127, 614.7768pt x 338.9463pt>
 File: Population Dynamics No Intervention.png Graphic file (type png)
 <use Population Dynamics No Intervention.png>
 Package pdftex.def Info: Population Dynamics No Intervention.png  used on input line 205.
 (pdftex.def)             Requested size: 259.20044pt x 142.90987pt.
-<Population Dynamics Bee Support.png, id=118, 614.7768pt x 338.9463pt>
+<Population Dynamics Bee Support.png, id=128, 614.7768pt x 338.9463pt>
 File: Population Dynamics Bee Support.png Graphic file (type png)
 <use Population Dynamics Bee Support.png>
 Package pdftex.def Info: Population Dynamics Bee Support.png  used on input line 208.
 (pdftex.def)             Requested size: 259.20044pt x 142.90987pt.
-<Population Dynamics Caterpillar Reduction.png, id=119, 614.7768pt x 338.9463pt>
+<Population Dynamics Caterpillar Reduction.png, id=129, 614.7768pt x 338.9463pt>
 File: Population Dynamics Caterpillar Reduction.png Graphic file (type png)
 <use Population Dynamics Caterpillar Reduction.png>
 Package pdftex.def Info: Population Dynamics Caterpillar Reduction.png  used on input line 211.
@@ -367,17 +351,18 @@ Package rerunfilecheck Info: File `final_pdf.out' has not changed.
 (rerunfilecheck)             Checksum: C136148432689B5DDBDC03FE01D54B9E;2683.
  ) 
 Here is how much of TeX's memory you used:
- 10228 strings out of 467867
- 155229 string characters out of 5418334
- 569723 words of memory out of 5000000
- 38809 multiletter control sequences out of 15000+600000
- 636327 words of font info for 73 fonts, out of 8000000 for 9000
+ 10228 strings out of 467525
+ 153656 string characters out of 5418982
+ 570349 words of memory out of 5000000
+ 38834 multiletter control sequences out of 15000+600000
+ 636160 words of font info for 72 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 75i,10n,79p,1532b,467s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on final_pdf.pdf (10 pages, 1251840 bytes).
+ 75i,10n,79p,1538b,467s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on final_pdf.pdf (10 pages, 1225349 bytes).
 PDF statistics:
- 209 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 500000)
+ 213 PDF objects out of 1000 (max. 8388607)
+ 159 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
  169 words of extra memory for PDF output out of 10000 (max. 10000000)
 
