@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.11)  18 NOV 2026 19:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.11)  18 NOV 2026 22:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -293,52 +293,75 @@ Package hyperref Info: Link coloring OFF on input line 18.
 
 Class amsart Warning: Abstract should precede \maketitle in AMS document classes; reported on input line 28.
 
-[1{C:/Users/kybel/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] [3]
-<model 1 population dynamics.png, id=99, 615.0177pt x 338.9463pt>
+[1{C:/Users/kybel/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
+Underfull \vbox (badness 3375) has occurred while \output is active []
+
+ [3]
+<model 1 population dynamics.png, id=105, 615.0177pt x 338.9463pt>
 File: model 1 population dynamics.png Graphic file (type png)
 <use model 1 population dynamics.png>
-Package pdftex.def Info: model 1 population dynamics.png  used on input line 162.
+Package pdftex.def Info: model 1 population dynamics.png  used on input line 153.
 (pdftex.def)             Requested size: 288.0011pt x 158.72552pt.
-<model 1 bifurcation.png, id=101, 1011.78pt x 361.35pt>
+<model 1 bifurcation.png, id=107, 1011.78pt x 361.35pt>
 File: model 1 bifurcation.png Graphic file (type png)
 <use model 1 bifurcation.png>
-Package pdftex.def Info: model 1 bifurcation.png  used on input line 168.
+Package pdftex.def Info: model 1 bifurcation.png  used on input line 160.
 (pdftex.def)             Requested size: 288.0011pt x 102.859pt.
  [4] [5 <./model 1 population dynamics.png> <./model 1 bifurcation.png>]
-<model2_plants.png, id=115, 640.0713pt x 425.1885pt>
+<model2_plants.png, id=123, 640.0713pt x 425.1885pt>
 File: model2_plants.png Graphic file (type png)
 <use model2_plants.png>
-Package pdftex.def Info: model2_plants.png  used on input line 184.
+Package pdftex.def Info: model2_plants.png  used on input line 176.
 (pdftex.def)             Requested size: 172.79846pt x 114.78296pt.
-<model2_caterpillars.png, id=116, 639.8304pt x 425.1885pt>
+<model2_caterpillars.png, id=124, 639.8304pt x 425.1885pt>
 File: model2_caterpillars.png Graphic file (type png)
 <use model2_caterpillars.png>
-Package pdftex.def Info: model2_caterpillars.png  used on input line 186.
+Package pdftex.def Info: model2_caterpillars.png  used on input line 178.
 (pdftex.def)             Requested size: 172.79846pt x 114.82837pt.
-<model2_bees.png, id=117, 640.0713pt x 425.1885pt>
+<model2_bees.png, id=125, 640.0713pt x 425.1885pt>
 File: model2_bees.png Graphic file (type png)
 <use model2_bees.png>
-Package pdftex.def Info: model2_bees.png  used on input line 189.
+Package pdftex.def Info: model2_bees.png  used on input line 181.
 (pdftex.def)             Requested size: 172.79846pt x 114.78296pt.
  [6 <./model2_plants.png> <./model2_caterpillars.png> <./model2_bees.png>]
-<Population Dynamics No Intervention.png, id=126, 614.7768pt x 338.9463pt>
+<Population Dynamics No Intervention.png, id=134, 614.7768pt x 338.9463pt>
 File: Population Dynamics No Intervention.png Graphic file (type png)
 <use Population Dynamics No Intervention.png>
-Package pdftex.def Info: Population Dynamics No Intervention.png  used on input line 207.
+Package pdftex.def Info: Population Dynamics No Intervention.png  used on input line 199.
 (pdftex.def)             Requested size: 259.20044pt x 142.90987pt.
-<Population Dynamics Bee Support.png, id=127, 614.7768pt x 338.9463pt>
+<Population Dynamics Bee Support.png, id=135, 614.7768pt x 338.9463pt>
 File: Population Dynamics Bee Support.png Graphic file (type png)
 <use Population Dynamics Bee Support.png>
-Package pdftex.def Info: Population Dynamics Bee Support.png  used on input line 210.
+Package pdftex.def Info: Population Dynamics Bee Support.png  used on input line 202.
 (pdftex.def)             Requested size: 259.20044pt x 142.90987pt.
-<Population Dynamics Caterpillar Reduction.png, id=128, 614.7768pt x 338.9463pt>
+<Population Dynamics Caterpillar Reduction.png, id=136, 614.7768pt x 338.9463pt>
 File: Population Dynamics Caterpillar Reduction.png Graphic file (type png)
 <use Population Dynamics Caterpillar Reduction.png>
-Package pdftex.def Info: Population Dynamics Caterpillar Reduction.png  used on input line 213.
+Package pdftex.def Info: Population Dynamics Caterpillar Reduction.png  used on input line 205.
 (pdftex.def)             Requested size: 259.20044pt x 142.90987pt.
  [7
 
- <./Population Dynamics No Intervention.png> <./Population Dynamics Bee Support.png> <./Population Dynamics Caterpillar Reduction.png>] [8] [9] (final_pdf.bbl) [10] (final_pdf.aux)
+ <./Population Dynamics No Intervention.png> <./Population Dynamics Bee Support.png> <./Population Dynamics Caterpillar Reduction.png>] [8] [9] (final_pdf.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 37--42
+[]\OT1/cmr/m/n/9 U.S. En-vi-ron-men-tal Pro-tec-tion Agency. Tools and strate-gies for pol-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--42
+\OT1/cmr/m/n/9 li-na-tor pro-tec-tion. []$\OT1/cmtt/m/n/9 https : / / www . epa . gov / pollinator-[]protection /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--56
+[]\OT1/cmr/m/n/9 University of Cal-i-for-nia Statewide In-te-grated Pest Man-age-ment Pro-gram.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--56
+\OT1/cmr/m/n/9 Leaf-feeding cater-pil-lars. []$\OT1/cmtt/m/n/9 https : / / ipm . ucanr . edu / home-[]and-[]landscape /
+ []
+
+) [10] (final_pdf.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -347,17 +370,17 @@ Package rerunfilecheck Info: File `final_pdf.out' has not changed.
 (rerunfilecheck)             Checksum: C136148432689B5DDBDC03FE01D54B9E;2683.
  ) 
 Here is how much of TeX's memory you used:
- 10229 strings out of 467867
- 155238 string characters out of 5418334
- 569805 words of memory out of 5000000
- 38809 multiletter control sequences out of 15000+600000
- 635814 words of font info for 71 fonts, out of 8000000 for 9000
+ 10243 strings out of 467867
+ 155547 string characters out of 5418334
+ 571192 words of memory out of 5000000
+ 38818 multiletter control sequences out of 15000+600000
+ 635981 words of font info for 72 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 75i,10n,79p,1532b,467s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on final_pdf.pdf (10 pages, 1236095 bytes).
+ 75i,10n,79p,1532b,468s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/kybel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on final_pdf.pdf (10 pages, 1254817 bytes).
 PDF statistics:
- 206 PDF objects out of 1000 (max. 8388607)
- 35 named destinations out of 1000 (max. 500000)
+ 230 PDF objects out of 1000 (max. 8388607)
+ 39 named destinations out of 1000 (max. 500000)
  169 words of extra memory for PDF output out of 10000 (max. 10000000)
 
