@@ -1,0 +1,6 @@
+Bella
+same as tristen, different method
+Ashtyn
+Tristen
+Make splits before (like split countries by developed or developing, or by continent). Then for each group (for example for the developed group) give the regression tree one parameter to use, see how accurately it predicts, then give it the nect factor, see how accurate, repeat. Figure our which parameter gives teh best accuracy. Do the same for the non developed countries and see if the best parameter is the same. 
+OR start with use all countries and use all parameters. then run teh regression tree using one parameter at a time, and see which one gives teh highest accuracy. (Or maybe it a combo). then condition on that paramater. For example if the best accuracy is developed, remove that parameter, and then repeat the process actually splitting by that parameter (actually dividing the countries into developed and underdeveloped and then repeat process ABOVE)
