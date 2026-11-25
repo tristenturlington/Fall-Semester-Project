@@ -1,6 +1,31 @@
 Bella
 same as tristen, different method
+
 Ashtyn
+
 Tristen
 Make splits before (like split countries by developed or developing, or by continent). Then for each group (for example for the developed group) give the regression tree one parameter to use, see how accurately it predicts, then give it the nect factor, see how accurate, repeat. Figure our which parameter gives teh best accuracy. Do the same for the non developed countries and see if the best parameter is the same. 
 OR start with use all countries and use all parameters. then run teh regression tree using one parameter at a time, and see which one gives teh highest accuracy. (Or maybe it a combo). then condition on that paramater. For example if the best accuracy is developed, remove that parameter, and then repeat the process actually splitting by that parameter (actually dividing the countries into developed and underdeveloped and then repeat process ABOVE)
+
+I love this idea for importance:
+many countries lack the resources to track dozens of indicators, so knowing which few measurable factors best track population health, and whether that differs between developed and developing countries, helps decide where to focus data collection and attention. 
+
+I ran RUN1 and it just didnt give me exactly what I wanted and I was worried becasue nodes were splitting at the same factor over and over
+Problems with RUN1:
+    - tree was taking adult mortality into accounts
+    - are some things actually contributing 0?
+    - use only one row per country (I think this is interesting if we wanted to do another part on training and testing other years!!!)
+
+So I made some chages and did RUN2 which shows us some things
+Results from RUN2:
+    - HIV/AIDS death rate is the dominant factor. It accounts for about 66% of the tree's total error reduction. The root split is at about 0.65, with average life expectancy around 74 on the low side and 57 on the high side.
+    - Income composition is second (25%), and schooling third (7%). These are both measures of development and overlap heavily, they are part of the development idea
+    - Almost everything else contributes about zero. Alcohol, health spending, vaccination, measles, and Status are all near 0 (doesn't mean they don't matter)
+
+Chat wanted me to do another run with an acception becasue HIV is so dominant - lowkey good call
+So we run the tree WITHOUT HIV so we can see what predicts life expectancy once the single biggest factor is out of the way?
+Results from NOHIV:
+    - income composition takes over when HIV is gone
+    - the sampels sizes are different for the first split! this is good becasue it is a more even after split 956 to 1371
+    - becasue of that split size split ^ we know the two factors work differently
+    - we see more of the secondary factors that are important
